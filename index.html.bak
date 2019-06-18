@@ -423,7 +423,7 @@ Mo...
             <!-- profile -->
             
             <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/Misaka.jpg >
+    <img class="profile-avatar" alt="avatar" src= /avatar/images.jpg >
     <div class="profile-name">bonsoirzw</div>
     
     <div class="profile-signature">
@@ -450,7 +450,7 @@ Mo...
             
                 <span class="iconfont-archer wechat" title=wechat>
                   
-                  <img class="profile-qr" src="/assets/example_qr.png" />
+                  <img class="profile-qr" src="/assets/Screenshot_2019-06-18-18-25-14-49.png" />
                 </span>
             
         
@@ -528,13 +528,13 @@ Mo...
     
         
             
-                <a href="mailto:2627894288@qq.com" class="iconfont-archer email" title=email ></a>
+                <a href="mailto:123456@qq.com" class="iconfont-archer email" title=email ></a>
             
         
     
         
             
-                <a href="https://github.com/wangzaiaaa" class="iconfont-archer github" target="_blank" title=github></a>
+                <a href="https://github.com/fi3ework" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -542,7 +542,7 @@ Mo...
             
                 <span class="iconfont-archer wechat" title=wechat>
                   
-                  <img class="profile-qr" src="/assets/Screenshot_2019-06-18-18-25-14-49.png" />
+                  <img class="profile-qr" src="/assets/example_qr.png" />
                 </span>
             
         
