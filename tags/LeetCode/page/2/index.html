@@ -346,178 +346,26 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/09/LeetCode139/" >
+        <a class="abstract-title" href = "/2019/06/19/LeetCode221/" >
             
-                <span>LeetCode139</span>
+                <span>LeetCode221</span>
         </a>
         <div class="abstract-content">
-            题目描述
-给定一个非空字符串 s 和一个包含非空单词列表的字典 wordDict，判定 s 是否可以被空格拆分为一个或多个在字典中出现的单词。
-说明：
-拆分时可以重复使用字典中的单词。你可以假设字典中没有重复的单词。
+            在一个由 0 和 1 组成的二维矩阵内，找到只包含 1 的最大正方形，并返回其面积。
+假设f(x,y) 表示在行x,列y最大正方形的边长，当matrix(x,y) =1时，则 f(x,y) = Min(f(x-1,y-1), f(x-1,y), f(x.y=1)) +1。
 
-解题思路
-我们假设dp[i] 表示以索引i-1结尾的字符串是否可以拆分，则 dp[i] = dp[j] &amp;&amp; wordDict.contanis(s.substring(j,i))。
-显然 这个问题存在最优子结构同时也存在重复子问题，可以用动态规划来解决。
-
-代码如下12345678910111213141516171819202122class Solu...
+代码如下：12345678910111213141516171819202122class Solution &#123;    public int maximalSquare(char[][] matrix) &#123;        if(matrix==null||matrix.length&lt;1) r...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/09</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/19</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/06/LeetCode1091/" >
-            
-                <span>LeetCode1091</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-在一个 N × N 的方形网格中，每个单元格有两种状态：空（0）或者阻塞（1）。
-一条从左上角到右下角、长度为 k 的畅通路径，由满足下述条件的单元格 C_1, C_2, …, C_k 组成：
-相邻单元格 C_i 和 C_{i+1} 在八个方向之一上连通（此时，C_i 和 C_{i+1} 不同且共享边或角）C_1 位于 (0, 0)（即，值为 grid[0] [0]）C_k 位于 (N-1, N-1)（即，值为 grid[N-1] [N-1]）如果 C_i 位于 (r, c)，则 grid[r] [c] 为空（即，grid[r] [c] == 0）返回这条从左上角到右下角的最短...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "bfs">bfs</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/04/字典树实现/" >
-            
-                <span>字典树实现</span>
-        </a>
-        <div class="abstract-content">
-            字典树描述
-又称单词查找树，Trie树，是一种树形结构，是一种哈希树的变种。典型应用是用于统计，排序和保存大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。   （百度百科）
-
-实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据结构">数据结构</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/04/LeetCode695/" >
-            
-                <span>LeetCode695</span>
-        </a>
-        <div class="abstract-content">
-            題目描述
-给定一个包含了一些 0 和 1的非空二维数组 grid , 一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。你可以假设二维矩阵的四个边缘都被水包围着。
-找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为0。)
-
-解题思路
-思路很简单，从每个节点开始向上，下，左，右四个方向扩展，并将扩展过的节点进行标记，防止重复搜索
-
-代码12345678910111213141516171819202122232425262728class Solution &#123;    private final int [][] dir = &#123;&#...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "dfs">dfs</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/02/LeetCode576/" >
-            
-                <span>LeetCode576</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个 m × n 的网格和一个球。球的起始坐标为 (i,j) ，你可以将球移到相邻的单元格内，或者往上、下、左、右四个方向上移动使球穿过网格边界。但是，你最多可以移动 N 次。找出可以将球移出边界的路径数量。答案可能非常大，返回 结果 mod 109 + 7 的值。
-
-解题思路
-假设dp[i] [j] [k] 表示在（i，j）位置k步内移除边界的路径数.
-则dp[i] [j] [k] = dp [i-1] [j] [k-1] + dp [i+1] [j] [k-1] + dp [i] [j-1] [k] + dp [i] [j+1] [k]
-
-代码1234567891011...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
     
@@ -527,6 +375,10 @@
     </article>
     
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/tags/LeetCode/">&#60; PREV</a><a class="page-number" href="/tags/LeetCode/">1</a><span class="page-number current">2</span>
+    </nav>
     
 </main>
             <!-- profile -->
