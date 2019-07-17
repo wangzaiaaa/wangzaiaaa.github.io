@@ -78,6 +78,8 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -201,10 +203,8 @@
 </head>
 
     
-        <body class="home-body">
     
-    
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -220,34 +220,21 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            bonsoirzw'blog
-            <!-- 文章页  -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
-            
-            
-                路虽远，行则将至。
-            
-            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -359,217 +346,24 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/17/LeetCode543/" >
+        <a class="abstract-title" href = "/2019/07/02/LeetCode576/" >
             
-                <span>LeetCode543</span>
+                <span>LeetCode576</span>
         </a>
         <div class="abstract-content">
             题目描述
-给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过根结点。
+给定一个 m × n 的网格和一个球。球的起始坐标为 (i,j) ，你可以将球移到相邻的单元格内，或者往上、下、左、右四个方向上移动使球穿过网格边界。但是，你最多可以移动 N 次。找出可以将球移出边界的路径数量。答案可能非常大，返回 结果 mod 109 + 7 的值。
 
 解题思路
-一开始我的思路是树的最大直径应该是左子树的最大深度加上右子树的最大深度，用这样的思路我写了代码，发现最后几个样例没有通过，然后我就想可能存在特殊的情况，树的最大直径可能是每个节点左子树的最大深度，右子树的最大深度的和中的最大值
+假设dp[i] [j] [k] 表示在（i，j）位置k步内移除边界的路径数.
+则dp[i] [j] [k] = dp [i-1] [j] [k-1] + dp [i+1] [j] [k-1] + dp [i] [j-1] [k] + dp [i] [j+1] [k]
 
-代码如下1234567891011121314151617181920212223242526/** * Definition for a binary tree node. * public class TreeNode...
+代码1234567891011...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "递归">递归</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/17/LeetCode617/" >
-            
-                <span>LeetCode617</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。
-你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。
-
-解题思路
-很容易想到是递归，先处理父节点，然后递归处理左右子节点，再返回父节点
-
-代码如下12345678910111213141516171819202122232425262728293031/** * Definition for a binary tree node. * public class TreeNode &#123...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "递归">递归</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/17/LeetCode160/" >
-            
-                <span>LeetCode160</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-编写一个程序，找到两个单链表相交的起始节点。
-如下面的两个链表
-
-在节点 c1 开始相交。
-示例 1：
-
-
-解题思路
-我们可以先把一条链表放到hashset中，然后从另一条链表中头开始遍历，如果当前节点存在与hashset中就返回当前节点。
-
-代码如下123456789101112131415161718192021222324252627282930313233343536/** * Definition for singly-linked list. * public class ListNode &#123; *     int val; *     ListNode n...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/12/Spring之Aop学习/" >
-            
-                <span>Spring之Aop学习</span>
-        </a>
-        <div class="abstract-content">
-            最近在学习spring实战第四版这本书，书中介绍了spring的很多模块，最近自己在项目中也用到了spring框架。由于笔者的记忆不是很好，所以把在学习spring中的知识记录下来，方便以后回顾。本文会介绍spring aop的一些概念和使用的方法。
-AOP介绍
-AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Object-Oriented Programing，面向对象编程）的补充和完善。OOP引入封装、继承和多态性等概念来建立一种对象层次结构，用以模拟公共行为的一个集合。当我们需要为分散的对象引入公共行为的时候，OOP则显得无能为力。也...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Spring">Spring</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Aop">Aop</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/11/LeetCode713/" >
-            
-                <span>LeetCode713</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个正整数数组 nums。
-找出该数组内乘积小于 k 的连续的子数组的个数。
-示例 1:
-输入: nums = [10,5,2,6], k = 100输出: 8解释: 8个乘积小于100的子数组分别为: [10], [5], [2], [6], [10,5], [5,2], [2,6], [5,2,6]。需要注意的是 [10,5,2] 并不是乘积小于100的子数组。说明:
-0 &lt; nums.length &lt;= 500000 &lt; nums[i] &lt; 10000 &lt;= k &lt; 10^6
-
-解题思路
-我想到的第一种思路是用动态规划dp [i] ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/10/LeetCode647/" >
-            
-                <span>LeetCode647</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
-具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。
-
-解题思路
-判断一个字符串是否是回文串很简单，一个字符串和它逆置的字符串是一样的，那么它就是回文串
-
-代码如下1234567891011121314151617class Solution &#123;    public int countSubstrings(String s) &#123;        if(s == null || s.length() &lt; 1) return 0;        String rev_...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/10</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/02</span>
             </div>
             <!-- tags  -->
             
@@ -578,154 +372,8 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
         <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回文串">回文串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/09/LeetCode139/" >
-            
-                <span>LeetCode139</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个非空字符串 s 和一个包含非空单词列表的字典 wordDict，判定 s 是否可以被空格拆分为一个或多个在字典中出现的单词。
-说明：
-拆分时可以重复使用字典中的单词。你可以假设字典中没有重复的单词。
-
-解题思路
-我们假设dp[i] 表示以索引i-1结尾的字符串是否可以拆分，则 dp[i] = dp[j] &amp;&amp; wordDict.contanis(s.substring(j,i))。
-显然 这个问题存在最优子结构同时也存在重复子问题，可以用动态规划来解决。
-
-代码如下12345678910111213141516171819202122class Solu...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/06/LeetCode1091/" >
-            
-                <span>LeetCode1091</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-在一个 N × N 的方形网格中，每个单元格有两种状态：空（0）或者阻塞（1）。
-一条从左上角到右下角、长度为 k 的畅通路径，由满足下述条件的单元格 C_1, C_2, …, C_k 组成：
-相邻单元格 C_i 和 C_{i+1} 在八个方向之一上连通（此时，C_i 和 C_{i+1} 不同且共享边或角）C_1 位于 (0, 0)（即，值为 grid[0] [0]）C_k 位于 (N-1, N-1)（即，值为 grid[N-1] [N-1]）如果 C_i 位于 (r, c)，则 grid[r] [c] 为空（即，grid[r] [c] == 0）返回这条从左上角到右下角的最短...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "bfs">bfs</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/04/字典树实现/" >
-            
-                <span>字典树实现</span>
-        </a>
-        <div class="abstract-content">
-            字典树描述
-又称单词查找树，Trie树，是一种树形结构，是一种哈希树的变种。典型应用是用于统计，排序和保存大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。   （百度百科）
-
-实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据结构">数据结构</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/04/LeetCode695/" >
-            
-                <span>LeetCode695</span>
-        </a>
-        <div class="abstract-content">
-            題目描述
-给定一个包含了一些 0 和 1的非空二维数组 grid , 一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。你可以假设二维矩阵的四个边缘都被水包围着。
-找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为0。)
-
-解题思路
-思路很简单，从每个节点开始向上，下，左，右四个方向扩展，并将扩展过的节点进行标记，防止重复搜索
-
-代码12345678910111213141516171819202122232425262728class Solution &#123;    private final int [][] dir = &#123;&#...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "dfs">dfs</a>
     
 </div>
             
@@ -735,108 +383,11 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/archives/2019/07/">&#60; PREV</a><a class="page-number" href="/archives/2019/07/">1</a><span class="page-number current">2</span>
     </nav>
     
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/img2.jpg >
-    <div class="profile-name">bonsoirzw</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:2627894288@qq.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="https://github.com/wangzaiaaa" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/assets/Screenshot_2019-06-18-18-25-14-49.png" />
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //www.baidu.com target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.google.com target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
