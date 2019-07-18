@@ -346,26 +346,31 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/04/字典树实现/" >
+        <a class="abstract-title" href = "/2019/07/18/LeetCode287/" >
             
-                <span>字典树实现</span>
+                <span>LeetCode287</span>
         </a>
         <div class="abstract-content">
-            字典树描述
-又称单词查找树，Trie树，是一种树形结构，是一种哈希树的变种。典型应用是用于统计，排序和保存大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。   （百度百科）
+            题目描述
+给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。
 
-实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767...
+解题思路
+这题之前做过，有n+1个数，数值都在1-n之间，我们可以用二分法找到数组中在数值区间【i，j】的数，如果在这个区间的数的个数大于区间的长度，那么重复的数就在这个区间之内，否则就在另一个区间。
+
+代码如下1234567891011121314151617181920212223class Solution &#123;    public int findDuplicate(int[] nums) ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/04</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/18</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据结构">数据结构</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分法">二分法</a>
     
 </div>
             

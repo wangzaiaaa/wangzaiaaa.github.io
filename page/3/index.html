@@ -78,8 +78,6 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -203,8 +201,10 @@
 </head>
 
     
+        <body class="home-body">
     
-<header class="header">
+    
+<header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -220,21 +220,34 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            bonsoirzw'blog
+            <!-- 文章页  -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            
+            
+                路虽远，行则将至。
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -346,36 +359,134 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/04/字典树实现/" >
+        <a class="abstract-title" href = "/2019/06/18/hello-world/" >
             
-                <span>字典树实现</span>
+                <span>Hello World</span>
         </a>
         <div class="abstract-content">
-            字典树描述
-又称单词查找树，Trie树，是一种树形结构，是一种哈希树的变种。典型应用是用于统计，排序和保存大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。   （百度百科）
+            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new "My New Post"
 
-实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767...
+More info: Writing
+Run server1$ hexo server
+
+Mo...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/04</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/18</span>
             </div>
             <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据结构">数据结构</a>
-    
-</div>
             
         </div>
     </article>
     
     <!-- paginator  -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/page/2/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+    
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" alt="avatar" src= /avatar/img2.jpg >
+    <div class="profile-name">bonsoirzw</div>
+    
+    <div class="profile-signature">
+        witness me
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <a href="mailto:2627894288@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="https://github.com/wangzaiaaa" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/Screenshot_2019-06-18-18-25-14-49.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    
+        <div class="friends">
+            <div>FRIENDS</div>
+            
+                
+                    <span>
+                        <a href= //www.baidu.com target="_black">friendA</a>
+                    </span>
+                
+            
+                
+                    <span>
+                        <a href= //www.google.com target="_black">friendB</a>
+                    </span>
+                
+            
+                
+            
+        </div>
+    
+    
+        <div class="about-me">
+            <a href = "/about" >ABOUT ME</a>
+        </div>
+    
+</div>
             
         </div>
         <footer class="footer footer-unloaded">
