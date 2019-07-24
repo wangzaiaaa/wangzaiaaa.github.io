@@ -346,12 +346,52 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/07/24/数据库的一些概念-二/" >
+            
+                <span>数据库的一些概念(二)</span>
+        </a>
+        <div class="abstract-content">
+            前言
+由于上篇关于数据库的概念还没有介绍完，这篇博客继续总结。
+声明：本篇博客是对GitHub上javaguide和cs-notes的总结，不是原创。
+
+事务的隔离级别
+
+READ-UNCOMMITTED(未提交读)：最低的隔离级别，允许读取还未提交的数据，可能产生脏读，不可重复读，幻影读。
+READ-COMMITTED(读已提交)：允许并发的事务读取已经提交的数据，可以避免脏读，但是不能防止幻影读和不可重复读。
+REPETABLE-READ(可重复读)：对同一字段的多次结果是相同的，除非数据被本身的事务修改，可以防止脏读和不可重复读，但是不能避免幻影读。
+SERIALIZABLE(可穿...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Mysql">Mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/07/23/数据库的一些概念/" >
             
                 <span>数据库的一些概念(一)</span>
         </a>
         <div class="abstract-content">
-            mysql的两种引擎InnoDB和MyISAM声明这篇博客是对javaGuide和cyc2019的总结整理。
+            mysql的两种引擎InnoDB和MyISAM声明这篇博客是对javaGuide和cyc2018的总结整理，不是原创。
 MyISAM和InnoDB的区别
 MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM不支持事务和行级锁，而且奔溃后无法安全恢复。在mysql5.5后引入了InnoDB。
 
@@ -361,7 +401,7 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
 是否支持事务，InnoDB支持，而MyISAM不支持。
 是否支持外键，InnoDB支持，而MyISAM不支持。
 是否支持奔溃后的安全恢复，InnoDB支持，而MyISAM不支持。
-是否支持mvcc（后面会介绍到...
+是否支持mvcc（后...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -372,9 +412,9 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
     
 </div>
             
@@ -797,9 +837,10 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     
     
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 24
         </div>
         <!-- search  -->
         
@@ -812,6 +853,11 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span><a class="archive-post-title" href= "/2019/07/24/数据库的一些概念-二/" >数据库的一些概念(二)</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -889,21 +935,6 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
         </li>
     
     
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/27</span><a class="archive-post-title" href= "/2019/06/27/LeetCode108/" >LeetCode108</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/26</span><a class="archive-post-title" href= "/2019/06/26/LeetCode152/" >LeetCode152</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/23</span><a class="archive-post-title" href= "/2019/06/23/LeetCode486/" >LeetCode486</a>
-        </li>
-    
-    
     
     
     
@@ -925,6 +956,21 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/27</span><a class="archive-post-title" href= "/2019/06/27/LeetCode108/" >LeetCode108</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/26</span><a class="archive-post-title" href= "/2019/06/26/LeetCode152/" >LeetCode152</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/23</span><a class="archive-post-title" href= "/2019/06/23/LeetCode486/" >LeetCode486</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -953,9 +999,9 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <span class="sidebar-tag-name" data-tags="LeetCode"><span class="iconfont-archer">&#xe606;</span>LeetCode</span>
     
-        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
-    
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
     
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
@@ -987,9 +1033,11 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
-    
         <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
+    
+        <span class="sidebar-tag-name" data-tags="Mysql"><span class="iconfont-archer">&#xe606;</span>Mysql</span>
+    
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

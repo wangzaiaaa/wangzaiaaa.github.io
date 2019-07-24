@@ -266,9 +266,9 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
     
 </div>
                 
@@ -403,7 +403,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="mysql的两种引擎InnoDB和MyISAM"><a href="#mysql的两种引擎InnoDB和MyISAM" class="headerlink" title="mysql的两种引擎InnoDB和MyISAM"></a>mysql的两种引擎InnoDB和MyISAM</h3><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><p>这篇博客是对javaGuide和cyc2019的总结整理。</p>
+        <h3 id="mysql的两种引擎InnoDB和MyISAM"><a href="#mysql的两种引擎InnoDB和MyISAM" class="headerlink" title="mysql的两种引擎InnoDB和MyISAM"></a>mysql的两种引擎InnoDB和MyISAM</h3><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><p>这篇博客是对javaGuide和cyc2018的总结整理，不是原创。</p>
 <h4 id="MyISAM和InnoDB的区别"><a href="#MyISAM和InnoDB的区别" class="headerlink" title="MyISAM和InnoDB的区别"></a>MyISAM和InnoDB的区别</h4><blockquote>
 <p>MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM不支持事务和行级锁，而且奔溃后无法安全恢复。在mysql5.5后引入了InnoDB。</p>
 </blockquote>
@@ -443,7 +443,7 @@ height:50vh;
 <p>共享锁（Shared），简称S锁，又称为读锁</p>
 <p>当一个事务对一个对象加了X锁，就可以对对象进行读取和更新，其他的事务不能对该对象加任何锁</p>
 <p>当一个事务对一个对象加了S锁，可以对该对象进行读取操作，不能进行更新操作，其他事务只能对该对象加S锁。</p>
-<h5 id="2-意向锁"><a href="#2-意向锁" class="headerlink" title="2.意向锁"></a>2.意向锁</h5><p>在存在行级锁和表级锁的情况下，事务T想要对表X加X锁，就需要先检查是否有其他的事务对表A或者表A中的任一行加了锁，如果对表A的每一行都检测一次，非常的耗时。</p>
+<h5 id="2-意向锁"><a href="#2-意向锁" class="headerlink" title="2.意向锁"></a>2.意向锁</h5><p>在存在行级锁和表级锁的情况下，事务T想要对表A加X锁，就需要先检查是否有其他的事务对表A或者表A中的任一行加了锁，如果对表A的每一行都检测一次，非常的耗时。</p>
 <p>意向锁在原来的X/S锁上引入了IX/IS，IX/IS都是表锁，用来表锁一个事务想在表中的记录上加X锁或S锁。</p>
 <p>有以下2个规定：</p>
 <p>一个事务在获取某个数据行的S锁前，必须要获得表的IS锁或者更强的锁。</p>
@@ -470,13 +470,18 @@ height:50vh;
             <p>原文作者：<a href="http://bonsoirzw.top">bonsoirzw</a>
             <p>原文链接：<a href="http://bonsoirzw.top/2019/07/23/数据库的一些概念/">http://bonsoirzw.top/2019/07/23/数据库的一些概念/</a>
             <p>发表日期：<a href="http://bonsoirzw.top/2019/07/23/数据库的一些概念/">July 23rd 2019, 7:30:55 pm</a>
-            <p>更新日期：<a href="http://bonsoirzw.top/2019/07/23/数据库的一些概念/">July 23rd 2019, 9:09:17 pm</a>
+            <p>更新日期：<a href="http://bonsoirzw.top/2019/07/23/数据库的一些概念/">July 24th 2019, 9:41:30 am</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/07/24/数据库的一些概念-二/" title= "数据库的一些概念(二)">
+                    <div class="nextTitle">数据库的一些概念(二)</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -934,9 +939,10 @@ top:50vh;
     
     
     
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 24
         </div>
         <!-- search  -->
         
@@ -949,6 +955,11 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span><a class="archive-post-title" href= "/2019/07/24/数据库的一些概念-二/" >数据库的一些概念(二)</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1026,21 +1037,6 @@ top:50vh;
         </li>
     
     
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/27</span><a class="archive-post-title" href= "/2019/06/27/LeetCode108/" >LeetCode108</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/26</span><a class="archive-post-title" href= "/2019/06/26/LeetCode152/" >LeetCode152</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/23</span><a class="archive-post-title" href= "/2019/06/23/LeetCode486/" >LeetCode486</a>
-        </li>
-    
-    
     
     
     
@@ -1062,6 +1058,21 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/27</span><a class="archive-post-title" href= "/2019/06/27/LeetCode108/" >LeetCode108</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/26</span><a class="archive-post-title" href= "/2019/06/26/LeetCode152/" >LeetCode152</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/23</span><a class="archive-post-title" href= "/2019/06/23/LeetCode486/" >LeetCode486</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1090,9 +1101,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="LeetCode"><span class="iconfont-archer">&#xe606;</span>LeetCode</span>
     
-        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
-    
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
     
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
@@ -1124,9 +1135,11 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
-    
         <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
+    
+        <span class="sidebar-tag-name" data-tags="Mysql"><span class="iconfont-archer">&#xe606;</span>Mysql</span>
+    
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
