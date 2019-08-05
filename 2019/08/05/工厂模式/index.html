@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>数据库的一些概念(一) · bonsoirzw&#39;blog</title>
+    <title>工厂模式 · bonsoirzw&#39;blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >bonsoirzw&#39;blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">数据库的一些概念(一)</a>
+                <a href="#" class="post-name">工厂模式</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            数据库的一些概念(一)
+            工厂模式
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,20 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "创建型模式">创建型模式</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.5k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">283</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/07/23</span>
+                    <span class="post-intro-time">2019/08/05</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,74 +403,35 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="mysql的两种引擎InnoDB和MyISAM"><a href="#mysql的两种引擎InnoDB和MyISAM" class="headerlink" title="mysql的两种引擎InnoDB和MyISAM"></a>mysql的两种引擎InnoDB和MyISAM</h3><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><p>这篇博客是对javaGuide和cyc2018的总结整理，不是原创。</p>
-<h4 id="MyISAM和InnoDB的区别"><a href="#MyISAM和InnoDB的区别" class="headerlink" title="MyISAM和InnoDB的区别"></a>MyISAM和InnoDB的区别</h4><blockquote>
-<p>MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM不支持事务和行级锁，而且奔溃后无法安全恢复。在mysql5.5后引入了InnoDB。</p>
+        <h3 id="工厂模式定义"><a href="#工厂模式定义" class="headerlink" title="工厂模式定义"></a>工厂模式定义</h3><blockquote>
+<p>工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual Constructor)模式或者多态工厂(Polymorphic Factory)模式，它属于类创建型模式。在工厂方法模式中，工厂父类负责定义创建产品对象的公共接口，而工厂子类则负责生成具体的产品对象，这样做的目的是将产品类的实例化操作延迟到工厂子类中完成，即通过工厂子类来确定究竟应该实例化哪一个具体产品类。</p>
 </blockquote>
-<h4 id="两者的对比"><a href="#两者的对比" class="headerlink" title="两者的对比"></a>两者的对比</h4><blockquote>
+<h4 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h4><blockquote>
 <ol>
-<li>是否支持行级锁，InnoDB支持，而MyISAM不支持。</li>
-<li>是否支持事务，InnoDB支持，而MyISAM不支持。</li>
-<li>是否支持外键，InnoDB支持，而MyISAM不支持。</li>
-<li>是否支持奔溃后的安全恢复，InnoDB支持，而MyISAM不支持。</li>
-<li>是否支持mvcc（后面会介绍到），InnoDB支持，而MyISAM不支持。</li>
+<li>Product：抽象产品</li>
+<li>ConcreteProduct：具体产品</li>
+<li>Factory ： 抽象产品</li>
+<li>ConcreteFactory：具体产品</li>
 </ol>
 </blockquote>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><h4 id="B-树索引和hash索引"><a href="#B-树索引和hash索引" class="headerlink" title="B+树索引和hash索引"></a>B+树索引和hash索引</h4><blockquote>
-<p>hash索引可以一次定位，检索效率非常高，而B+树索引先要二分查找到叶子节点，然后才能定位。hash索引仅仅能满足 = ，IN，&lt;&gt; 等查询，不支持范围查询，而B+树支持范围查询，由于计算的hash值可能产生碰撞，因此hash索引避免不了全表扫描，而B+树索引可以。</p>
-</blockquote>
-<h3 id="事务的特性"><a href="#事务的特性" class="headerlink" title="事务的特性"></a>事务的特性</h3><p>事务是一组逻辑操作，要么全部执行，要么全不执行。</p>
-<h3 id="事务的四大特性"><a href="#事务的四大特性" class="headerlink" title="事务的四大特性"></a>事务的四大特性</h3><blockquote>
-<p>1.原子性（Atomicity）：事务是最小的执行单元，不允许分割，要么全部执行，要么一步都不执行。</p>
-<p>2.一致性（Consistency）: 数据库在事务执行前后都保持一致性，在一致性状态下，所有事务对一个数据的读取结果都是相同的。</p>
-<p>3.隔离性（Isolation）: 事务是相互隔离的，一个事务不会受到其他事务的干扰。</p>
-<p>4.持久性（Durability）：一旦事务提交，它对数据库的修改是持久的。</p>
-</blockquote>
-<h3 id="并发事务带来的问题"><a href="#并发事务带来的问题" class="headerlink" title="并发事务带来的问题"></a>并发事务带来的问题</h3><blockquote>
-<p>1.脏读（Dirty read）：当一个事务正在对一个数据进行修改，但是事务还没有提交，此时有另一个事务对此数据进行访问，并且使用到了该数据，因为这个数据是还没有提交的数据，因此，另一个事务读到的就是脏数据。</p>
-<p>2.丢失修改（Lost to modify）: 当一个事务读取一个数据的时候，另一个事务也也读取了这个数据，第一个事务先修改了该数据，第一个事务还没有提交，另一个事务也修改了该数据，此时第一个数据的修改的被丢失了，称为丢失修改</p>
-<p>3.不可重复读（Unrepeatableread）：当一个事务多次读取一个数据的过程中，另一个事务对该数据进行了修改，导致了事务多次读取一个数据时数据不一致的问题。</p>
-<p>3.幻影读（Phantom read）：当一个事务多次读取多条数据的过程中，另一个事务进行了插入或者删除，导致，事务多次读取数据的记录条数不一致。</p>
-</blockquote>
-<h3 id="封锁"><a href="#封锁" class="headerlink" title="封锁"></a>封锁</h3><h4 id="封锁粒度"><a href="#封锁粒度" class="headerlink" title="封锁粒度"></a>封锁粒度</h4><blockquote>
-<p>mysql中提供了两种封锁粒度：行级锁和表级锁</p>
-<p>表级锁的粒度比行级锁的粒度大，发生争用的可能性更大，系统的并发程度就越低。</p>
-<p>行级锁的粒度小，发生争用的可能性更小，打算加锁需要消耗资源，锁的粒度越小，锁的开销越大。</p>
-<p>在选择封锁粒度时要权衡并发程度和锁的开销。</p>
-</blockquote>
-<h4 id="封锁的类型"><a href="#封锁的类型" class="headerlink" title="封锁的类型"></a>封锁的类型</h4><blockquote>
-<h5 id="1-读写锁"><a href="#1-读写锁" class="headerlink" title="1.读写锁"></a>1.读写锁</h5><p>排它锁（Exclusive）,简称X锁，又称为写锁</p>
-<p>共享锁（Shared），简称S锁，又称为读锁</p>
-<p>当一个事务对一个对象加了X锁，就可以对对象进行读取和更新，其他的事务不能对该对象加任何锁</p>
-<p>当一个事务对一个对象加了S锁，可以对该对象进行读取操作，不能进行更新操作，其他事务只能对该对象加S锁。</p>
-<h5 id="2-意向锁"><a href="#2-意向锁" class="headerlink" title="2.意向锁"></a>2.意向锁</h5><p>在存在行级锁和表级锁的情况下，事务T想要对表A加X锁，就需要先检查是否有其他的事务对表A或者表A中的任一行加了锁，如果对表A的每一行都检测一次，非常的耗时。</p>
-<p>意向锁在原来的X/S锁上引入了IX/IS，IX/IS都是表锁，用来表锁一个事务想在表中的记录上加X锁或S锁。</p>
-<p>有以下2个规定：</p>
-<p>一个事务在获取某个数据行的S锁前，必须要获得表的IS锁或者更强的锁。</p>
-<p>一个事务在获取某个数据行的X锁前，必须要获得表的X锁。</p>
-</blockquote>
-<h4 id="封锁协议"><a href="#封锁协议" class="headerlink" title="封锁协议"></a>封锁协议</h4><h5 id="1-三级封锁协议"><a href="#1-三级封锁协议" class="headerlink" title="1.三级封锁协议"></a>1.三级封锁协议</h5><blockquote>
-<p>一级封锁协议：</p>
-<p>事务T要修改数据A时必须要加X锁，直到事务结束时才释放锁，这样可以解决丢失修改の的问题，因为不能有2个事务同时对一个数据修改</p>
-<p>二级封锁协议：</p>
-<p>在一个封锁协议的基础上，要求读数据时必须要加S锁，读取完后立马释放，这样可以解决读脏数据の问题，因为在一个事务对数据进行修改的时候，已经对其加了X锁，另一个事务就不能加S锁了。</p>
-<p>三级封锁协议：</p>
-<p>在二级的基础上，要求对数据进行读取的时候要加S锁，直到事务结束时才释放，这样其他的事务就不能在事务进行的过程中加入X锁，这样就解决了不可重复读的问题。</p>
-</blockquote>
-<h5 id="2-两段锁协议"><a href="#2-两段锁协议" class="headerlink" title="2.两段锁协议"></a>2.两段锁协议</h5><blockquote>
-<p>加锁和解锁分为两个阶段进行。</p>
-<p>可串行化调度是指，通过并发控制，使得并发执行的事务结果与某个串行执行的事务结果相同。</p>
-</blockquote>
-<p>感觉写不完了，，，第二篇待续。</p>
+<h4 id="UML图"><a href="#UML图" class="headerlink" title="UML图"></a>UML图</h4><p><img src="/2019/08/05/工厂模式/SimpleFactory.PNG" alt></p>
+<h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><h4 id="抽象产品"><a href="#抽象产品" class="headerlink" title="抽象产品"></a>抽象产品</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">use</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="抽象工厂"><a href="#抽象工厂" class="headerlink" title="抽象工厂"></a>抽象工厂</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Factory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">public</span> Product <span class="title">factoryMethod</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="具体产品"><a href="#具体产品" class="headerlink" title="具体产品"></a>具体产品</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteProduct</span> <span class="keyword">implements</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">use</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"ConcreteProduct have been used"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteProduct1</span> <span class="keyword">implements</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">use</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"ConcreteProduct1 have been used"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="具体工厂"><a href="#具体工厂" class="headerlink" title="具体工厂"></a>具体工厂</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteFactory</span> <span class="keyword">extends</span> <span class="title">Factory</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Product <span class="title">factoryMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ConcreteProduct();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteFactory1</span> <span class="keyword">extends</span> <span class="title">Factory</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Product <span class="title">factoryMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ConcreteProduct1();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://bonsoirzw.top">bonsoirzw</a>
-            <p>原文链接：<a href="http://bonsoirzw.top/2019/07/23/数据库的一些概念/">http://bonsoirzw.top/2019/07/23/数据库的一些概念/</a>
-            <p>发表日期：<a href="http://bonsoirzw.top/2019/07/23/数据库的一些概念/">July 23rd 2019, 7:30:55 pm</a>
-            <p>更新日期：<a href="http://bonsoirzw.top/2019/07/23/数据库的一些概念/">July 24th 2019, 9:41:30 am</a>
+            <p>原文链接：<a href="http://bonsoirzw.top/2019/08/05/工厂模式/">http://bonsoirzw.top/2019/08/05/工厂模式/</a>
+            <p>发表日期：<a href="http://bonsoirzw.top/2019/08/05/工厂模式/">August 5th 2019, 6:58:17 pm</a>
+            <p>更新日期：<a href="http://bonsoirzw.top/2019/08/05/工厂模式/">August 5th 2019, 7:18:49 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -478,17 +439,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/07/24/数据库的一些概念-二/" title= "数据库的一些概念(二)">
-                    <div class="nextTitle">数据库的一些概念(二)</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/07/19/LeetCode560/" title= "LeetCode560">
-                    <div class="prevTitle">LeetCode560</div>
+                <a href= "/2019/08/05/简单工厂模式/" title= "简单工厂模式">
+                    <div class="prevTitle">简单工厂模式</div>
                 </a>
             
         </li>
@@ -607,7 +563,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql的两种引擎InnoDB和MyISAM"><span class="toc-number">1.</span> <span class="toc-text">mysql的两种引擎InnoDB和MyISAM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#声明"><span class="toc-number">2.</span> <span class="toc-text">声明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MyISAM和InnoDB的区别"><span class="toc-number">2.1.</span> <span class="toc-text">MyISAM和InnoDB的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#两者的对比"><span class="toc-number">2.2.</span> <span class="toc-text">两者的对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引"><span class="toc-number">3.</span> <span class="toc-text">索引</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#B-树索引和hash索引"><span class="toc-number">3.1.</span> <span class="toc-text">B+树索引和hash索引</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事务的特性"><span class="toc-number">4.</span> <span class="toc-text">事务的特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事务的四大特性"><span class="toc-number">5.</span> <span class="toc-text">事务的四大特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#并发事务带来的问题"><span class="toc-number">6.</span> <span class="toc-text">并发事务带来的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#封锁"><span class="toc-number">7.</span> <span class="toc-text">封锁</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#封锁粒度"><span class="toc-number">7.1.</span> <span class="toc-text">封锁粒度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#封锁的类型"><span class="toc-number">7.2.</span> <span class="toc-text">封锁的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-读写锁"><span class="toc-number">7.2.1.</span> <span class="toc-text">1.读写锁</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-意向锁"><span class="toc-number">7.2.2.</span> <span class="toc-text">2.意向锁</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#封锁协议"><span class="toc-number">7.3.</span> <span class="toc-text">封锁协议</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-三级封锁协议"><span class="toc-number">7.3.1.</span> <span class="toc-text">1.三级封锁协议</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-两段锁协议"><span class="toc-number">7.3.2.</span> <span class="toc-text">2.两段锁协议</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#工厂模式定义"><span class="toc-number">1.</span> <span class="toc-text">工厂模式定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#模式结构"><span class="toc-number">1.1.</span> <span class="toc-text">模式结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UML图"><span class="toc-number">1.2.</span> <span class="toc-text">UML图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现代码"><span class="toc-number">2.</span> <span class="toc-text">实现代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#抽象产品"><span class="toc-number">2.1.</span> <span class="toc-text">抽象产品</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#抽象工厂"><span class="toc-number">2.2.</span> <span class="toc-text">抽象工厂</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#具体产品"><span class="toc-number">2.3.</span> <span class="toc-text">具体产品</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#具体工厂"><span class="toc-number">2.4.</span> <span class="toc-text">具体工厂</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
