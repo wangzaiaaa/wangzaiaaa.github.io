@@ -346,6 +346,47 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/08/11/抽象工厂模式/" >
+            
+                <span>抽象工厂模式</span>
+        </a>
+        <div class="abstract-content">
+            前言本文参考了cyc2018和图解设计模式
+模式动机在前面工厂方法（工厂模式）介绍中，具体的工厂负责生产具体的产品，每一个具体的工厂只生产一个具体的产品，但是我们需要一个工厂可以生产多个产品对象。
+模式定义抽象工厂模式(Abstract Factory Pattern)：提供一个创建一系列相关或相互依赖对象的接口，而无须指定它们具体的类。抽象工厂模式又称为Kit模式，属于对象创建型模式。
+模式结构
+AbstractFactory ：抽象工厂
+ConcreteFactory：具体工厂
+AbstractProduct：抽象产品
+Product：具体产品
+
+UML图
+代码感觉满简单的，就是继承...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "创建者模式">创建者模式</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/08/11/redis学习-Day1/" >
             
                 <span>redis学习(Day1)</span>
@@ -685,47 +726,9 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
     
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/19/LeetCode560/" >
-            
-                <span>LeetCode560</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个整数数组和一个整数 k，你需要找到该数组中和为 k 的连续的子数组的个数。
-
-解题思路
-一开始没有看到是连续的数组，我用了回溯，答案错了。。。，后来看到题目的要求才知道。。。
-时间复杂度为O(n * n)的穷举应该很简单可以想到，都是这种算法会超时，看了一下别人的思路，用HashMap保存连续数组的值，在循环的过程中判断map中是否存在key为当前连续数组的值减去k的数，如果有则表示中间有一段连续的的数组的和为k。
-
-代码如下12345678910111213141516171819202122232425262728class Solution &#123;    p...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HashMap">HashMap</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
     
 </div>
             
@@ -1239,44 +1242,9 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 31
+        Total : 32
         </div>
         <!-- search  -->
         
@@ -1289,6 +1257,11 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2019/08/11/抽象工厂模式/" >抽象工厂模式</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1406,6 +1379,29 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
         </li>
     
     
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/06/18/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
         <li class="archive-post-item">
             <span class="archive-post-date">06/27</span><a class="archive-post-title" href= "/2019/06/27/LeetCode108/" >LeetCode108</a>
         </li>
@@ -1438,20 +1434,6 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <li class="archive-post-item">
             <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2019/06/18/first-blog/" >first blog</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/06/18/hello-world/" >Hello World</a>
         </li>
     
     </div>
@@ -1493,23 +1475,25 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <span class="sidebar-tag-name" data-tags="markdown"><span class="iconfont-archer">&#xe606;</span>markdown</span>
     
-        <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
-    
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
     
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     
         <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     
+        <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
+    
         <span class="sidebar-tag-name" data-tags="创建型模式"><span class="iconfont-archer">&#xe606;</span>创建型模式</span>
     
+        <span class="sidebar-tag-name" data-tags="创建者模式"><span class="iconfont-archer">&#xe606;</span>创建者模式</span>
+    
         <span class="sidebar-tag-name" data-tags="排序算法"><span class="iconfont-archer">&#xe606;</span>排序算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
     
         <span class="sidebar-tag-name" data-tags="Mysql"><span class="iconfont-archer">&#xe606;</span>Mysql</span>
-    
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="设计原则"><span class="iconfont-archer">&#xe606;</span>设计原则</span>
     
