@@ -346,36 +346,36 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/17/LeetCode160/" >
+        <a class="abstract-title" href = "/2019/08/17/适配器模式/" >
             
-                <span>LeetCode160</span>
+                <span>适配器模式</span>
         </a>
         <div class="abstract-content">
-            题目描述
-编写一个程序，找到两个单链表相交的起始节点。
-如下面的两个链表
+            前言本文参考了cyc2018和图解设计模式
+模式动机有时现有的类可以满足客户类的功能需求，但是它提供的接口不一定是客户类所需要的，在这种情况下，现有的接口需要转化为客户类期待的接口，适配器模式可以完成这样的转化。
+模式定义适配器（Adapter Pattern）：将一个接口转换为客户希望的另一个接口，适配器模式使接口不兼容的类可以一起工作，其别名为包装器（Wrapper）。
+模式结构
+Target：目标抽象类
+Adapter：适配器类
+Adaptee：适配者类
+Client：客户类
 
-在节点 c1 开始相交。
-示例 1：
-
-
-解题思路
-我们可以先把一条链表放到hashset中，然后从另一条链表中头开始遍历，如果当前节点存在与hashset中就返回当前节点。
-
-代码如下123456789101112131415161718192021222324252627282930313233343536/** * Definition for singly-linked list. * public class ListNode &#123; *     int val; *     ListNode n...
+UML图
+优点
+将目标类和适配者类解耦，通过引入一个适配器类来重用现有的适配者类，而无需修改适配者的原有...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/17</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
     
 </div>
             
