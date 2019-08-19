@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>bonsoirzw&#39;blog</title>
+    <title>享元模式 · bonsoirzw&#39;blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Hello World</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">享元模式</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Hello World</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hello World
-            <!-- 文章页  -->
+            享元模式
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,51 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                一个菜鸡的博客
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">385</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/08/19</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,497 +401,65 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/03/计算机网路常见面试题总结/" >
-            
-                <span>计算机网路常见面试题总结</span>
-        </a>
-        <div class="abstract-content">
-            声明本文参考了GitHub上的javaguide以及其他一些网络的关于计算机网络的面经。
-1. OSI,TCP/IP的分层结构与功能
-体系结构OSI体系结构分为7层，从上到下依次为：应用层，表示层，回话层，传输层，网络层，数据链路层，物理层。
-TCP/IP体系结构分为：应用层，运输层，网际层，网络接口层。
-五层的体系结构：应用层，运输层，网络层，数据链路层，物理层。
-各层的功能应用层应用层的功能是通过应用程序之间的交互来完成特定的网络应用。应用层协议定义的是指应用程序间通信和交互的规则。对于不同的应用程序有着不同的应用协议。比如DNS，FTP，TELNET等等
-表示层tcp/ip第五版描...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "面试题">面试题</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "计算机网络">计算机网络</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="模式动机"><a href="#模式动机" class="headerlink" title="模式动机"></a>模式动机</h3><p>面向对象技术可以很好地解决一些灵活或可扩展性问题，但是在很多情况下需要增加类和对象的个数，当对象的数量太多时，将导致运行的代价过高。享元模式正是为解决这一问题而诞生的。享元模式通过共享技术实现对相同或者相似对象的重用。</p>
+<h3 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h3><p>享元模式(Flyweight Pattern)：运用共享技术有效地支持大量细粒度对象的复用。系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用。由于享元模式要求能够共享的对象必须是细粒度对象，因此它又称为轻量级模式，它是一种对象结构型模式。</p>
+<h3 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h3><ol>
+<li>Flyweight：抽象享元类</li>
+<li>ConcreteFlyweight：具体共享类</li>
+<li>UnsharedConcreteFlyweight：非共享具体享元类</li>
+<li>FlyweightFactory：享元工厂类</li>
+</ol>
+<h3 id="UML图"><a href="#UML图" class="headerlink" title="UML图"></a>UML图</h3><p><img src="/2019/08/19/享元模式/demo.PNG" alt></p>
+<h3 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h3><ul>
+<li>一个系统有大量相同或者相似的对象，由于这类对象的大量使用，造成内存的大量耗费。</li>
+<li>对象的大部分状态都可以外部化，可以将这些外部状态传入对象中。</li>
+<li>使用享元模式需要维护一个存储享元对象的享元池，而这需要耗费资源，因此，应当在多次重复使用享元对象时才值得使用享元模式。</li>
+</ul>
+<p>java常量池中的缓冲等等。</p>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/02/设计原则/" >
-            
-                <span>设计原则</span>
-        </a>
-        <div class="abstract-content">
-            先浅谈一下面向对象面向对象VS面向过程
-以我的理解：
-面向过程是先分析解决问题的步骤然后一步一步的去解决，而面向对象把构成问题的实体抽象成一个个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。
-优缺点比较：
-面向过程的性能更高，因为它不需要去实例化对象。
-面向对象的复用性更好，也更加容易扩展，容易测试。
-
-面向对象的三大特性
-
-继承：继承实现了IS-A的关系，通过继承，子类可以获得父类所有的非private的属性和方法。
-封装：隐藏对象的属性和实现细节，仅对外暴露接口，并控制对象的访问级别。
-多态：多态分为编译时多态和运行时多态，编译时多态是只...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://bonsoirzw.top">bonsoirzw</a>
+            <p>原文链接：<a href="http://bonsoirzw.top/2019/08/19/享元模式/">http://bonsoirzw.top/2019/08/19/享元模式/</a>
+            <p>发表日期：<a href="http://bonsoirzw.top/2019/08/19/享元模式/">August 19th 2019, 6:29:28 pm</a>
+            <p>更新日期：<a href="http://bonsoirzw.top/2019/08/19/享元模式/">August 19th 2019, 7:01:35 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计原则">设计原则</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/29/排序算法-一/" >
-            
-                <span>排序算法(一)</span>
-        </a>
-        <div class="abstract-content">
-            本篇文章介绍了八大排序算法中的前四种，明天会更新剩下的四种。
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121/** * @auth...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "排序算法">排序算法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/24/数据库的一些概念-二/" >
-            
-                <span>数据库的一些概念(二)</span>
-        </a>
-        <div class="abstract-content">
-            前言
-由于上篇关于数据库的概念还没有介绍完，这篇博客继续总结。
-声明：本篇博客是对GitHub上javaguide和cs-notes的总结，不是原创。
-
-事务的隔离级别
-
-READ-UNCOMMITTED(未提交读)：最低的隔离级别，允许读取还未提交的数据，可能产生脏读，不可重复读，幻影读。
-READ-COMMITTED(读已提交)：允许并发的事务读取已经提交的数据，可以避免脏读，但是不能防止幻影读和不可重复读。
-REPETABLE-READ(可重复读)：对同一字段的多次结果是相同的，除非数据被本身的事务修改，可以防止脏读和不可重复读，但是不能避免幻影读。
-SERIALIZABLE(可穿...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Mysql">Mysql</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/23/数据库的一些概念/" >
-            
-                <span>数据库的一些概念(一)</span>
-        </a>
-        <div class="abstract-content">
-            mysql的两种引擎InnoDB和MyISAM声明这篇博客是对javaGuide和cyc2018的总结整理，不是原创。
-MyISAM和InnoDB的区别
-MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM不支持事务和行级锁，而且奔溃后无法安全恢复。在mysql5.5后引入了InnoDB。
-
-两者的对比
-
-是否支持行级锁，InnoDB支持，而MyISAM不支持。
-是否支持事务，InnoDB支持，而MyISAM不支持。
-是否支持外键，InnoDB支持，而MyISAM不支持。
-是否支持奔溃后的安全恢复，InnoDB支持，而MyISAM不支持。
-是否支持mvcc（后...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/19/LeetCode560/" >
-            
-                <span>LeetCode560</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个整数数组和一个整数 k，你需要找到该数组中和为 k 的连续的子数组的个数。
-
-解题思路
-一开始没有看到是连续的数组，我用了回溯，答案错了。。。，后来看到题目的要求才知道。。。
-时间复杂度为O(n * n)的穷举应该很简单可以想到，都是这种算法会超时，看了一下别人的思路，用HashMap保存连续数组的值，在循环的过程中判断map中是否存在key为当前连续数组的值减去k的数，如果有则表示中间有一段连续的的数组的和为k。
-
-代码如下12345678910111213141516171819202122232425262728class Solution &#123;    p...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HashMap">HashMap</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/18/LeetCode287/" >
-            
-                <span>LeetCode287</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。
-
-解题思路
-这题之前做过，有n+1个数，数值都在1-n之间，我们可以用二分法找到数组中在数值区间【i，j】的数，如果在这个区间的数的个数大于区间的长度，那么重复的数就在这个区间之内，否则就在另一个区间。
-
-代码如下1234567891011121314151617181920212223class Solution &#123;    public int findDuplicate(int[] nums) ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分法">二分法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/17/LeetCode543/" >
-            
-                <span>LeetCode543</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过根结点。
-
-解题思路
-一开始我的思路是树的最大直径应该是左子树的最大深度加上右子树的最大深度，用这样的思路我写了代码，发现最后几个样例没有通过，然后我就想可能存在特殊的情况，树的最大直径可能是每个节点左子树的最大深度，右子树的最大深度的和中的最大值
-
-代码如下1234567891011121314151617181920212223242526/** * Definition for a binary tree node. * public class TreeNode...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "递归">递归</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/17/LeetCode617/" >
-            
-                <span>LeetCode617</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。
-你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。
-
-解题思路
-很容易想到是递归，先处理父节点，然后递归处理左右子节点，再返回父节点
-
-代码如下12345678910111213141516171819202122232425262728293031/** * Definition for a binary tree node. * public class TreeNode &#123...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "递归">递归</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/17/LeetCode160/" >
-            
-                <span>LeetCode160</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-编写一个程序，找到两个单链表相交的起始节点。
-如下面的两个链表
-
-在节点 c1 开始相交。
-示例 1：
-
-
-解题思路
-我们可以先把一条链表放到hashset中，然后从另一条链表中头开始遍历，如果当前节点存在与hashset中就返回当前节点。
-
-代码如下123456789101112131415161718192021222324252627282930313233343536/** * Definition for singly-linked list. * public class ListNode &#123; *     int val; *     ListNode n...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">NEXT &#62;</a>
-    </nav>
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/img2.jpg >
-    <div class="profile-name">bonsoirzw</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+        </li>
+        <li class="previous">
             
-                <a href="mailto:2627894288@qq.com" class="iconfont-archer email" title=email ></a>
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/08/18/外观模式/" title= "外观模式">
+                    <div class="prevTitle">外观模式</div>
+                </a>
             
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
-            
-                <a href="https://github.com/wangzaiaaa" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
     
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/assets/Screenshot_2019-06-18-18-25-14-49.png" />
-                </span>
-            
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //www.baidu.com target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.google.com target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -924,6 +542,24 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#模式动机"><span class="toc-number">1.</span> <span class="toc-text">模式动机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模式定义"><span class="toc-number">2.</span> <span class="toc-text">模式定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模式结构"><span class="toc-number">3.</span> <span class="toc-text">模式结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UML图"><span class="toc-number">4.</span> <span class="toc-text">UML图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#适用场景"><span class="toc-number">5.</span> <span class="toc-text">适用场景</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1819,6 +1455,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
