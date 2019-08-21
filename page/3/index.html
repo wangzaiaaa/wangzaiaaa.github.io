@@ -359,6 +359,45 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/07/17/LeetCode543/" >
+            
+                <span>LeetCode543</span>
+        </a>
+        <div class="abstract-content">
+            题目描述
+给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过根结点。
+
+解题思路
+一开始我的思路是树的最大直径应该是左子树的最大深度加上右子树的最大深度，用这样的思路我写了代码，发现最后几个样例没有通过，然后我就想可能存在特殊的情况，树的最大直径可能是每个节点左子树的最大深度，右子树的最大深度的和中的最大值
+
+代码如下1234567891011121314151617181920212223242526/** * Definition for a binary tree node. * public class TreeNode...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "递归">递归</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/07/17/LeetCode617/" >
             
                 <span>LeetCode617</span>
@@ -687,46 +726,6 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
         <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "dfs">dfs</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/02/LeetCode576/" >
-            
-                <span>LeetCode576</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个 m × n 的网格和一个球。球的起始坐标为 (i,j) ，你可以将球移到相邻的单元格内，或者往上、下、左、右四个方向上移动使球穿过网格边界。但是，你最多可以移动 N 次。找出可以将球移出边界的路径数量。答案可能非常大，返回 结果 mod 109 + 7 的值。
-
-解题思路
-假设dp[i] [j] [k] 表示在（i，j）位置k步内移除边界的路径数.
-则dp[i] [j] [k] = dp [i-1] [j] [k-1] + dp [i+1] [j] [k-1] + dp [i] [j-1] [k] + dp [i] [j+1] [k]
-
-代码1234567891011...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
 </div>
             
@@ -1489,36 +1488,9 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 39
+        Total : 40
         </div>
         <!-- search  -->
         
@@ -1531,6 +1503,11 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/21</span><a class="archive-post-title" href= "/2019/08/21/中介者模式/" >中介者模式</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1576,6 +1553,29 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
         <li class="archive-post-item">
             <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2019/08/11/redis学习-Day1/" >redis学习(Day1)</a>
         </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/06/18/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
     
     
         <li class="archive-post-item">
@@ -1722,20 +1722,6 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
             <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2019/06/18/first-blog/" >first blog</a>
         </li>
     
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/06/18/hello-world/" >Hello World</a>
-        </li>
-    
     </div>
   </div>
         <div class="sidebar-panel-tags">
@@ -1747,17 +1733,17 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
         <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
     
-        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
-    
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
+        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
+    
         <span class="sidebar-tag-name" data-tags="二分法"><span class="iconfont-archer">&#xe606;</span>二分法</span>
+    
+        <span class="sidebar-tag-name" data-tags="HashMap"><span class="iconfont-archer">&#xe606;</span>HashMap</span>
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="递归"><span class="iconfont-archer">&#xe606;</span>递归</span>
-    
-        <span class="sidebar-tag-name" data-tags="HashMap"><span class="iconfont-archer">&#xe606;</span>HashMap</span>
     
         <span class="sidebar-tag-name" data-tags="回文串"><span class="iconfont-archer">&#xe606;</span>回文串</span>
     
@@ -1780,6 +1766,8 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     
         <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
+    
+        <span class="sidebar-tag-name" data-tags="行为型模式"><span class="iconfont-archer">&#xe606;</span>行为型模式</span>
     
         <span class="sidebar-tag-name" data-tags="结构型模式"><span class="iconfont-archer">&#xe606;</span>结构型模式</span>
     
