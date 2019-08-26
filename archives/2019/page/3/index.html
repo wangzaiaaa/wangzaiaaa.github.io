@@ -346,6 +346,47 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/07/23/数据库的一些概念/" >
+            
+                <span>数据库的一些概念(一)</span>
+        </a>
+        <div class="abstract-content">
+            mysql的两种引擎InnoDB和MyISAM声明这篇博客是对javaGuide和cyc2018的总结整理，不是原创。
+MyISAM和InnoDB的区别
+MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM不支持事务和行级锁，而且奔溃后无法安全恢复。在mysql5.5后引入了InnoDB。
+
+两者的对比
+
+是否支持行级锁，InnoDB支持，而MyISAM不支持。
+是否支持事务，InnoDB支持，而MyISAM不支持。
+是否支持外键，InnoDB支持，而MyISAM不支持。
+是否支持奔溃后的安全恢复，InnoDB支持，而MyISAM不支持。
+是否支持mvcc（后...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/07/19/LeetCode560/" >
             
                 <span>LeetCode560</span>
@@ -682,40 +723,6 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
         <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/06/LeetCode1091/" >
-            
-                <span>LeetCode1091</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-在一个 N × N 的方形网格中，每个单元格有两种状态：空（0）或者阻塞（1）。
-一条从左上角到右下角、长度为 k 的畅通路径，由满足下述条件的单元格 C_1, C_2, …, C_k 组成：
-相邻单元格 C_i 和 C_{i+1} 在八个方向之一上连通（此时，C_i 和 C_{i+1} 不同且共享边或角）C_1 位于 (0, 0)（即，值为 grid[0] [0]）C_k 位于 (N-1, N-1)（即，值为 grid[N-1] [N-1]）如果 C_i 位于 (r, c)，则 grid[r] [c] 为空（即，grid[r] [c] == 0）返回这条从左上角到右下角的最短...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "bfs">bfs</a>
     
 </div>
             
@@ -1421,9 +1428,40 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 42
+        Total : 43
         </div>
         <!-- search  -->
         
@@ -1436,6 +1474,11 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/26</span><a class="archive-post-title" href= "/2019/08/26/SQL优化/" >SQL优化</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1503,6 +1546,11 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span><a class="archive-post-title" href= "/2019/08/05/工厂模式/" >工厂模式</a>
+        </li>
+    
+    
     
     
     
@@ -1524,11 +1572,6 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span><a class="archive-post-title" href= "/2019/08/05/工厂模式/" >工厂模式</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1674,11 +1717,11 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
     
+        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
+    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
-    
-        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
     
         <span class="sidebar-tag-name" data-tags="二分法"><span class="iconfont-archer">&#xe606;</span>二分法</span>
     
@@ -1690,9 +1733,11 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
         <span class="sidebar-tag-name" data-tags="回文串"><span class="iconfont-archer">&#xe606;</span>回文串</span>
     
+        <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
+    
         <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
     
-        <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
+        <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
     
         <span class="sidebar-tag-name" data-tags="Spring"><span class="iconfont-archer">&#xe606;</span>Spring</span>
     
@@ -1710,23 +1755,21 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
         <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
     
-        <span class="sidebar-tag-name" data-tags="结构型模式"><span class="iconfont-archer">&#xe606;</span>结构型模式</span>
-    
-        <span class="sidebar-tag-name" data-tags="创建型模式"><span class="iconfont-archer">&#xe606;</span>创建型模式</span>
+        <span class="sidebar-tag-name" data-tags="命令模式"><span class="iconfont-archer">&#xe606;</span>命令模式</span>
     
         <span class="sidebar-tag-name" data-tags="行为型模式"><span class="iconfont-archer">&#xe606;</span>行为型模式</span>
     
-        <span class="sidebar-tag-name" data-tags="命令模式"><span class="iconfont-archer">&#xe606;</span>命令模式</span>
+        <span class="sidebar-tag-name" data-tags="结构型模式"><span class="iconfont-archer">&#xe606;</span>结构型模式</span>
+    
+        <span class="sidebar-tag-name" data-tags="创建型模式"><span class="iconfont-archer">&#xe606;</span>创建型模式</span>
     
         <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     
         <span class="sidebar-tag-name" data-tags="创建者模式"><span class="iconfont-archer">&#xe606;</span>创建者模式</span>
     
-        <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="Mysql"><span class="iconfont-archer">&#xe606;</span>Mysql</span>
-    
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="设计原则"><span class="iconfont-archer">&#xe606;</span>设计原则</span>
     
