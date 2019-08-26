@@ -359,6 +359,48 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/08/17/适配器模式/" >
+            
+                <span>适配器模式</span>
+        </a>
+        <div class="abstract-content">
+            前言本文参考了cyc2018和图解设计模式
+模式动机有时现有的类可以满足客户类的功能需求，但是它提供的接口不一定是客户类所需要的，在这种情况下，现有的接口需要转化为客户类期待的接口，适配器模式可以完成这样的转化。
+模式定义适配器（Adapter Pattern）：将一个接口转换为客户希望的另一个接口，适配器模式使接口不兼容的类可以一起工作，其别名为包装器（Wrapper）。
+模式结构
+Target：目标抽象类
+Adapter：适配器类
+Adaptee：适配者类
+Client：客户类
+
+UML图
+优点
+将目标类和适配者类解耦，通过引入一个适配器类来重用现有的适配者类，而无需修改适配者的原有...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/08/11/抽象工厂模式/" >
             
                 <span>抽象工厂模式</span>
@@ -712,44 +754,6 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
         <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/19/LeetCode560/" >
-            
-                <span>LeetCode560</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个整数数组和一个整数 k，你需要找到该数组中和为 k 的连续的子数组的个数。
-
-解题思路
-一开始没有看到是连续的数组，我用了回溯，答案错了。。。，后来看到题目的要求才知道。。。
-时间复杂度为O(n * n)的穷举应该很简单可以想到，都是这种算法会超时，看了一下别人的思路，用HashMap保存连续数组的值，在循环的过程中判断map中是否存在key为当前连续数组的值减去k的数，如果有则表示中间有一段连续的的数组的和为k。
-
-代码如下12345678910111213141516171819202122232425262728class Solution &#123;    p...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HashMap">HashMap</a>
     
 </div>
             
@@ -1543,9 +1547,18 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 41
+        Total : 42
         </div>
         <!-- search  -->
         
@@ -1558,6 +1571,11 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/26</span><a class="archive-post-title" href= "/2019/08/26/策略模式/" >策略模式</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1620,11 +1638,6 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
         </li>
     
     
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span><a class="archive-post-title" href= "/2019/08/05/工厂模式/" >工厂模式</a>
-        </li>
-    
-    
     
     
     
@@ -1646,6 +1659,11 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span><a class="archive-post-title" href= "/2019/08/05/工厂模式/" >工厂模式</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1791,11 +1809,11 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
     
-        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
+    
+        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
     
         <span class="sidebar-tag-name" data-tags="二分法"><span class="iconfont-archer">&#xe606;</span>二分法</span>
     
@@ -1805,9 +1823,9 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <span class="sidebar-tag-name" data-tags="HashMap"><span class="iconfont-archer">&#xe606;</span>HashMap</span>
     
-        <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
-    
         <span class="sidebar-tag-name" data-tags="回文串"><span class="iconfont-archer">&#xe606;</span>回文串</span>
+    
+        <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
     
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
@@ -1827,11 +1845,11 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
     
-        <span class="sidebar-tag-name" data-tags="行为型模式"><span class="iconfont-archer">&#xe606;</span>行为型模式</span>
-    
         <span class="sidebar-tag-name" data-tags="结构型模式"><span class="iconfont-archer">&#xe606;</span>结构型模式</span>
     
         <span class="sidebar-tag-name" data-tags="创建型模式"><span class="iconfont-archer">&#xe606;</span>创建型模式</span>
+    
+        <span class="sidebar-tag-name" data-tags="行为型模式"><span class="iconfont-archer">&#xe606;</span>行为型模式</span>
     
         <span class="sidebar-tag-name" data-tags="命令模式"><span class="iconfont-archer">&#xe606;</span>命令模式</span>
     
