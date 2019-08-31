@@ -346,6 +346,46 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/07/24/数据库的一些概念-二/" >
+            
+                <span>数据库的一些概念(二)</span>
+        </a>
+        <div class="abstract-content">
+            前言
+由于上篇关于数据库的概念还没有介绍完，这篇博客继续总结。
+声明：本篇博客是对GitHub上javaguide和cs-notes的总结，不是原创。
+
+事务的隔离级别
+
+READ-UNCOMMITTED(未提交读)：最低的隔离级别，允许读取还未提交的数据，可能产生脏读，不可重复读，幻影读。
+READ-COMMITTED(读已提交)：允许并发的事务读取已经提交的数据，可以避免脏读，但是不能防止幻影读和不可重复读。
+REPETABLE-READ(可重复读)：对同一字段的多次结果是相同的，除非数据被本身的事务修改，可以防止脏读和不可重复读，但是不能避免幻影读。
+SERIALIZABLE(可穿...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Mysql">Mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/07/23/数据库的一些概念/" >
             
                 <span>数据库的一些概念(一)</span>
@@ -683,46 +723,6 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
         <a class="post-tag" href="javascript:void(0);" data-tags = "算法">算法</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "回文串">回文串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/09/LeetCode139/" >
-            
-                <span>LeetCode139</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一个非空字符串 s 和一个包含非空单词列表的字典 wordDict，判定 s 是否可以被空格拆分为一个或多个在字典中出现的单词。
-说明：
-拆分时可以重复使用字典中的单词。你可以假设字典中没有重复的单词。
-
-解题思路
-我们假设dp[i] 表示以索引i-1结尾的字符串是否可以拆分，则 dp[i] = dp[j] &amp;&amp; wordDict.contanis(s.substring(j,i))。
-显然 这个问题存在最优子结构同时也存在重复子问题，可以用动态规划来解决。
-
-代码如下12345678910111213141516171819202122class Solu...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
 </div>
             
@@ -1446,22 +1446,9 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 43
+        Total : 44
         </div>
         <!-- search  -->
         
@@ -1474,6 +1461,11 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/31</span><a class="archive-post-title" href= "/2019/08/31/LeetCode91/" >LeetCode91</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1717,9 +1709,9 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
         <span class="sidebar-tag-name" data-tags="算法"><span class="iconfont-archer">&#xe606;</span>算法</span>
     
-        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
+    
+        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
@@ -1733,9 +1725,9 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
         <span class="sidebar-tag-name" data-tags="回文串"><span class="iconfont-archer">&#xe606;</span>回文串</span>
     
-        <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
-    
         <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
+    
+        <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
         <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
     
@@ -1755,21 +1747,21 @@ AOP（Aspect-Oriented Programming，面向切面编程），可以说是OOP（Ob
     
         <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
     
-        <span class="sidebar-tag-name" data-tags="命令模式"><span class="iconfont-archer">&#xe606;</span>命令模式</span>
-    
         <span class="sidebar-tag-name" data-tags="行为型模式"><span class="iconfont-archer">&#xe606;</span>行为型模式</span>
     
         <span class="sidebar-tag-name" data-tags="结构型模式"><span class="iconfont-archer">&#xe606;</span>结构型模式</span>
     
         <span class="sidebar-tag-name" data-tags="创建型模式"><span class="iconfont-archer">&#xe606;</span>创建型模式</span>
     
+        <span class="sidebar-tag-name" data-tags="命令模式"><span class="iconfont-archer">&#xe606;</span>命令模式</span>
+    
         <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     
         <span class="sidebar-tag-name" data-tags="创建者模式"><span class="iconfont-archer">&#xe606;</span>创建者模式</span>
     
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
-    
         <span class="sidebar-tag-name" data-tags="Mysql"><span class="iconfont-archer">&#xe606;</span>Mysql</span>
+    
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="设计原则"><span class="iconfont-archer">&#xe606;</span>设计原则</span>
     
