@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>bonsoirzw&#39;blog</title>
+    <title>Linux命令行大全读书笔计(一) · bonsoirzw&#39;blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Hello World</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Linux命令行大全读书笔计(一)</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Hello World</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Linux命令行大全读书笔计(一)
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">501</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/09/11</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,62 +399,79 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/11/redis学习-Day1/" >
-            
-                <span>redis学习(Day1)</span>
-        </a>
-        <div class="abstract-content">
-            前言
-现在nosql非常火，特别是像redis等，作为一个菜鸡，当然不能错过。。。
-今天上午买了一台阿里云，搭了redis的环境，准备开始学习redis
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前大三学操作系统这门课程的时候，虽然有在使用linux，并且在上面安装了jdk写了页面置换的FIFO和LRU算法，但是一直没有真正系统的学习，所以就打算这段时间每天抽出一小时来系统的学习一下linux。</p>
+<h3 id="几个简单的命令"><a href="#几个简单的命令" class="headerlink" title="几个简单的命令"></a>几个简单的命令</h3><h4 id="1-date"><a href="#1-date" class="headerlink" title="1. date"></a>1. date</h4><p>date命令可以显示当前系统的时间和日期</p>
+<h4 id="2-cal"><a href="#2-cal" class="headerlink" title="2. cal"></a>2. cal</h4><p>cal命令可以显示当月的日历</p>
+<h4 id="3-df"><a href="#3-df" class="headerlink" title="3. df"></a>3. df</h4><p>df命令可以显示磁盘当前的可用情况</p>
+<h4 id="4-free"><a href="#4-free" class="headerlink" title="4. free"></a>4. free</h4><p>free命令可以显示可用内存</p>
+<h3 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h3><p>要想在linux系统中导航文件系统，我们需要了解以下几个指令</p>
+<h4 id="1-pwd"><a href="#1-pwd" class="headerlink" title="1. pwd"></a>1. pwd</h4><p>pwd用来查看当前的工作目录</p>
+<h4 id="2-cd"><a href="#2-cd" class="headerlink" title="2. cd"></a>2. cd</h4><p>cd用来切换目录</p>
+<h4 id="3-ls"><a href="#3-ls" class="headerlink" title="3. ls"></a>3. ls</h4><p>ls用来列出目录内容</p>
+<h3 id="ls命令的一些参数"><a href="#ls命令的一些参数" class="headerlink" title="ls命令的一些参数"></a>ls命令的一些参数</h3><ul>
+<li>-a : 列出所有的文件，包括隐藏的文件</li>
+<li>-l ：以长格式显示文件</li>
+<li>-t ：按照修改时间排序</li>
+<li>-r ：按照相反的顺序显示结果</li>
+</ul>
+<h4 id="ls-l-显示内容介绍"><a href="#ls-l-显示内容介绍" class="headerlink" title="ls -l 显示内容介绍"></a>ls -l 显示内容介绍</h4><p>-rwxr-xr-x.  1 root root      2859 Jul 27  2015 zmore</p>
+<p>第一个字符表示文件的类型：- 表示普通文件 d 表示目录</p>
+<p>接下来的9个字符：前3个表示文件所属者权限，后3个表示文件所属组的权限，最后3个字符表示其他用户的权限</p>
+<h3 id="确定文件的类型和查看文件的内容"><a href="#确定文件的类型和查看文件的内容" class="headerlink" title="确定文件的类型和查看文件的内容"></a>确定文件的类型和查看文件的内容</h3><h4 id="1-file"><a href="#1-file" class="headerlink" title="1. file"></a>1. file</h4><p>file命令用来查看文件的类型</p>
+<h4 id="2-less"><a href="#2-less" class="headerlink" title="2. less"></a>2. less</h4><p>less命令用来查看文件的内容</p>
+<h3 id="linux目录结构"><a href="#linux目录结构" class="headerlink" title="linux目录结构"></a>linux目录结构</h3><ul>
+<li>/ ：根目录</li>
+<li>/bin：包括系统启动和运行的2进制文件</li>
+<li>/boot：用来启动系统</li>
+<li>/dev：设备所存放的目录</li>
+<li>/home：每个用户在/home目录中都有一个属于自己的目录</li>
+<li>/lib：系统的库文件存放的地方</li>
+<li>/root：root账户的主目录</li>
+<li>/tmp：存放临时文件的地方</li>
+<li>/usr：包含普通用户使用的所有程序和相关文件</li>
+</ul>
 
-redis的通用命令
-keysredis中所有的键
-dbsizekey的数量
-exists keyredis中存在的key
-del key删除key
-expire key seconds隔一段时间删除key
-type key键的类型
-
-示例keyskeys *  : 显示所有的key
-
-keys可以支持通配符
-
-dbsize
-exists key
-del
-expire key secondskey在seconds秒后过期
-
-ttl k...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nosql">nosql</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://bonsoirzw.top">bonsoirzw</a>
+            <p>原文链接：<a href="http://bonsoirzw.top/2019/09/11/Linux命令行大全读书笔计-一/">http://bonsoirzw.top/2019/09/11/Linux命令行大全读书笔计-一/</a>
+            <p>发表日期：<a href="http://bonsoirzw.top/2019/09/11/Linux命令行大全读书笔计-一/">September 11th 2019, 6:44:10 pm</a>
+            <p>更新日期：<a href="http://bonsoirzw.top/2019/09/11/Linux命令行大全读书笔计-一/">September 11th 2019, 7:37:21 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/09/04/LeetCode718/" title= "LeetCode718">
+                    <div class="prevTitle">LeetCode718</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -478,6 +556,24 @@ ttl k...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#几个简单的命令"><span class="toc-number">2.</span> <span class="toc-text">几个简单的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-date"><span class="toc-number">2.1.</span> <span class="toc-text">1. date</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-cal"><span class="toc-number">2.2.</span> <span class="toc-text">2. cal</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-df"><span class="toc-number">2.3.</span> <span class="toc-text">3. df</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-free"><span class="toc-number">2.4.</span> <span class="toc-text">4. free</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导航"><span class="toc-number">3.</span> <span class="toc-text">导航</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-pwd"><span class="toc-number">3.1.</span> <span class="toc-text">1. pwd</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-cd"><span class="toc-number">3.2.</span> <span class="toc-text">2. cd</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-ls"><span class="toc-number">3.3.</span> <span class="toc-text">3. ls</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls命令的一些参数"><span class="toc-number">4.</span> <span class="toc-text">ls命令的一些参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ls-l-显示内容介绍"><span class="toc-number">4.1.</span> <span class="toc-text">ls -l 显示内容介绍</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#确定文件的类型和查看文件的内容"><span class="toc-number">5.</span> <span class="toc-text">确定文件的类型和查看文件的内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-file"><span class="toc-number">5.1.</span> <span class="toc-text">1. file</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-less"><span class="toc-number">5.2.</span> <span class="toc-text">2. less</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux目录结构"><span class="toc-number">6.</span> <span class="toc-text">linux目录结构</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1575,6 +1671,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
