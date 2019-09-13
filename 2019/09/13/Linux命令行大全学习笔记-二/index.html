@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>bonsoirzw&#39;blog</title>
+    <title>Linux命令行大全学习笔记(二) · bonsoirzw&#39;blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Hello World</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Linux命令行大全学习笔记(二)</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Hello World</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Linux命令行大全学习笔记(二)
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">818</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/09/13</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,50 +399,109 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/02/设计原则/" >
-            
-                <span>设计原则</span>
-        </a>
-        <div class="abstract-content">
-            先浅谈一下面向对象面向对象VS面向过程
-以我的理解：
-面向过程是先分析解决问题的步骤然后一步一步的去解决，而面向对象把构成问题的实体抽象成一个个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。
-优缺点比较：
-面向过程的性能更高，因为它不需要去实例化对象。
-面向对象的复用性更好，也更加容易扩展，容易测试。
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇文章主要介绍linux操作文件和目录</p>
+<h3 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h3><ul>
+<li>cp：复制文件和目录</li>
+<li>mv：移动或者重命名文件和目录</li>
+<li>mkdir：创建目录</li>
+<li>rm：移除文件和目录</li>
+<li>in：创建硬链接和符号链接</li>
+</ul>
+<h3 id="通配符介绍"><a href="#通配符介绍" class="headerlink" title="通配符介绍"></a>通配符介绍</h3><ul>
+<li>*：匹配任意多个字符</li>
+<li>?：匹配任意单一字符</li>
+<li>[characters]：匹配任意一个属于字符集的字符</li>
+<li>[!characters]：匹配任意一个不属于字符集的字符</li>
+<li>[[:class:]]：匹配任意一个属于指定字符集中的字符</li>
+<li>[:alnum:]：匹配任意一个字母或数字</li>
+<li>[:alpha:]：匹配任意一个字母</li>
+<li>[:digit:]：匹配任意一个数字</li>
+<li>[:lower:]：匹配任意一个小写字母</li>
+<li>[:upper:]：匹配任意一个大写字母</li>
+</ul>
+<h3 id="文件和目录操作"><a href="#文件和目录操作" class="headerlink" title="文件和目录操作"></a>文件和目录操作</h3><h4 id="1-创建目录"><a href="#1-创建目录" class="headerlink" title="1. 创建目录"></a>1. 创建目录</h4><p>mkdir directory…</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir dir1</span><br><span class="line">mkdir dir2 dir3</span><br></pre></td></tr></table></figure>
 
-面向对象的三大特性
+<h4 id="2-复制文件和目录"><a href="#2-复制文件和目录" class="headerlink" title="2. 复制文件和目录"></a>2. 复制文件和目录</h4><h5 id="将单个文件和目录复制到目录中"><a href="#将单个文件和目录复制到目录中" class="headerlink" title="将单个文件和目录复制到目录中"></a>将单个文件和目录复制到目录中</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp item1 item2</span><br></pre></td></tr></table></figure>
 
-继承：继承实现了IS-A的关系，通过继承，子类可以获得父类所有的非private的属性和方法。
-封装：隐藏对象的属性和实现细节，仅对外暴露接口，并控制对象的访问级别。
-多态：多态分为编译时多态和运行时多态，编译时多态是只...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计原则">设计原则</a>
-    
-</div>
-            
-        </div>
+<h5 id="将多个文件或目录复制到目录中"><a href="#将多个文件或目录复制到目录中" class="headerlink" title="将多个文件或目录复制到目录中"></a>将多个文件或目录复制到目录中</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp item... directory</span><br></pre></td></tr></table></figure>
+
+<h5 id="cp命令的命令选项"><a href="#cp命令的命令选项" class="headerlink" title="cp命令的命令选项"></a>cp命令的命令选项</h5><ul>
+<li>-a , –archive：复制文件和目录及其属性，包括所有权和权限</li>
+<li>-i , –interactive：在覆盖一个已经存在的文件前，提示用户进行确认，如果没有该选项，会默认覆盖</li>
+<li>-r , –recursive：递归地复制文件和目录。复制目录需要使用到该选项</li>
+<li>-u , –update：只会复制目标目录不存在或者目标目录相应文件的更新文件</li>
+<li>-v , –verbose：复制文件时，显示消息性信息。</li>
+</ul>
+<h4 id="移除和重命名文件"><a href="#移除和重命名文件" class="headerlink" title="移除和重命名文件"></a>移除和重命名文件</h4><h5 id="将文件（或目录）item1移动（或重命名）为item2"><a href="#将文件（或目录）item1移动（或重命名）为item2" class="headerlink" title="将文件（或目录）item1移动（或重命名）为item2"></a>将文件（或目录）item1移动（或重命名）为item2</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv item1 item2</span><br></pre></td></tr></table></figure>
+
+<h5 id="将一个或者多个条目从一个目录移动到另一个目录"><a href="#将一个或者多个条目从一个目录移动到另一个目录" class="headerlink" title="将一个或者多个条目从一个目录移动到另一个目录"></a>将一个或者多个条目从一个目录移动到另一个目录</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv item... directory</span><br></pre></td></tr></table></figure>
+
+<h5 id="mv命令的命令选项"><a href="#mv命令的命令选项" class="headerlink" title="mv命令的命令选项"></a>mv命令的命令选项</h5><ul>
+<li>-i , –interactive ：覆盖一个已经存在的文件之前，提示用户确认</li>
+<li>-u , –update    ： 将文件从一个目录移动到另一个目录，只移动那些目标目录中不存在的文件或是目标目录中相应的更新文件</li>
+<li>-v ， –verbose：移动文件时显示消息性消息</li>
+</ul>
+<h4 id="移除和删除文件"><a href="#移除和删除文件" class="headerlink" title="移除和删除文件"></a>移除和删除文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm item...</span><br></pre></td></tr></table></figure>
+
+<h5 id="rm命令的命令选项"><a href="#rm命令的命令选项" class="headerlink" title="rm命令的命令选项"></a>rm命令的命令选项</h5><ul>
+<li>-i , –interactive 删除一个存在的文件前会提示用户</li>
+<li>-r ,–recursive 递归地删除目录。也就是说，如果删除的目录有子目录的话，也要删除。要删除一个目录，就必须要选定该选项</li>
+<li>-f ,–force 忽略不存在的文件不提示确认删除</li>
+<li>-v,–verbose 删除文件时显示消息性信息</li>
+</ul>
+<h4 id="创建链接"><a href="#创建链接" class="headerlink" title="创建链接"></a>创建链接</h4><h5 id="创建硬链接"><a href="#创建硬链接" class="headerlink" title="创建硬链接"></a>创建硬链接</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln file link</span><br></pre></td></tr></table></figure>
+
+<h5 id="创建符号链接"><a href="#创建符号链接" class="headerlink" title="创建符号链接"></a>创建符号链接</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s item link</span><br></pre></td></tr></table></figure>
+
+<h5 id="硬链接和软链接的区别"><a href="#硬链接和软链接的区别" class="headerlink" title="硬链接和软链接的区别"></a>硬链接和软链接的区别</h5><p><a href="http://ybin.cc/linux/soft-link-vs-hard-link/" target="_blank" rel="noopener">参考至这篇文章</a></p>
+<p>linux中，在文件系统的视角来看，文件其实是inode，一个文件对应于一个inode，在inode<br>中保存有文件的元信息(metadata)，比如文件大小，读写权限，设备号，操作接口(read, write etc.)<br>等。</p>
+<ul>
+<li>硬链接：硬链接使用和源文件相同的inode和data blocks，但是可以有不同的路径，删除源文件，文件还可以通过硬链接访问</li>
+<li>软链接：软链接使用和源文件不同的inode和data blocks，但是其data blocks存储着源文件的信息，就像是一个快捷方式</li>
+</ul>
+
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://bonsoirzw.top">bonsoirzw</a>
+            <p>原文链接：<a href="http://bonsoirzw.top/2019/09/13/Linux命令行大全学习笔记-二/">http://bonsoirzw.top/2019/09/13/Linux命令行大全学习笔记-二/</a>
+            <p>发表日期：<a href="http://bonsoirzw.top/2019/09/13/Linux命令行大全学习笔记-二/">September 13th 2019, 8:24:44 pm</a>
+            <p>更新日期：<a href="http://bonsoirzw.top/2019/09/13/Linux命令行大全学习笔记-二/">September 13th 2019, 9:39:20 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/09/11/Linux命令行大全读书笔计-一/" title= "Linux命令行大全读书笔计(一)">
+                    <div class="prevTitle">Linux命令行大全读书笔计(一)</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -466,6 +586,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关命令"><span class="toc-number">2.</span> <span class="toc-text">相关命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通配符介绍"><span class="toc-number">3.</span> <span class="toc-text">通配符介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件和目录操作"><span class="toc-number">4.</span> <span class="toc-text">文件和目录操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-创建目录"><span class="toc-number">4.1.</span> <span class="toc-text">1. 创建目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-复制文件和目录"><span class="toc-number">4.2.</span> <span class="toc-text">2. 复制文件和目录</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#将单个文件和目录复制到目录中"><span class="toc-number">4.2.1.</span> <span class="toc-text">将单个文件和目录复制到目录中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#将多个文件或目录复制到目录中"><span class="toc-number">4.2.2.</span> <span class="toc-text">将多个文件或目录复制到目录中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#cp命令的命令选项"><span class="toc-number">4.2.3.</span> <span class="toc-text">cp命令的命令选项</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#移除和重命名文件"><span class="toc-number">4.3.</span> <span class="toc-text">移除和重命名文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#将文件（或目录）item1移动（或重命名）为item2"><span class="toc-number">4.3.1.</span> <span class="toc-text">将文件（或目录）item1移动（或重命名）为item2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#将一个或者多个条目从一个目录移动到另一个目录"><span class="toc-number">4.3.2.</span> <span class="toc-text">将一个或者多个条目从一个目录移动到另一个目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#mv命令的命令选项"><span class="toc-number">4.3.3.</span> <span class="toc-text">mv命令的命令选项</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#移除和删除文件"><span class="toc-number">4.4.</span> <span class="toc-text">移除和删除文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#rm命令的命令选项"><span class="toc-number">4.4.1.</span> <span class="toc-text">rm命令的命令选项</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建链接"><span class="toc-number">4.5.</span> <span class="toc-text">创建链接</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#创建硬链接"><span class="toc-number">4.5.1.</span> <span class="toc-text">创建硬链接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#创建符号链接"><span class="toc-number">4.5.2.</span> <span class="toc-text">创建符号链接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#硬链接和软链接的区别"><span class="toc-number">4.5.3.</span> <span class="toc-text">硬链接和软链接的区别</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1619,6 +1757,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
