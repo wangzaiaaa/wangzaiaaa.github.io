@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>bonsoirzw&#39;blog</title>
+    <title>Linux命令行大全读书笔记(四) · bonsoirzw&#39;blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Hello World</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Linux命令行大全读书笔记(四)</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Hello World</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Linux命令行大全读书笔记(四)
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">505</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/09/15</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,136 +399,99 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/26/SQL优化/" >
-            
-                <span>SQL优化</span>
-        </a>
-        <div class="abstract-content">
-            前言本片文章总结一下我之前看的关于sql优化的文章
-索引因为后面会讲到索引，这里先介绍一下。
-索引是数据库中一个数据结构，用来帮助快速查询，更新数据。当然维护索引是有代价的，索引需要站空间，修改插入记录时都需要更新索引，消耗更多的时间。
-索引的优点
-通过创建唯一性索引，可以保证数据库中每一行数据的唯一性。
-可以加快数据的查找速度
-通过给外键加索引，可以加快表的连接速度
-使用分组和排序时也可以减少查询中分组和排序的时间
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇文章主要介绍了I/O重定向</p>
+<h3 id="涉及到的命令"><a href="#涉及到的命令" class="headerlink" title="涉及到的命令"></a>涉及到的命令</h3><ul>
+<li>cat：合并文件</li>
+<li>sort：对文本行进行排序</li>
+<li>uniq：报告或者删除文件中重复的行</li>
+<li>wc：打印文件中的换行符，字和字节的个数</li>
+<li>grep：打印匹配行</li>
+<li>head：输出文件的第一部分的内容</li>
+<li>tail：输出文件最后一部分的内容</li>
+<li>tee：读取标准输入的数据，并将其内容输出到标准输出和文件中</li>
+</ul>
+<h3 id="标准输入输出重定向"><a href="#标准输入输出重定向" class="headerlink" title="标准输入输出重定向"></a>标准输入输出重定向</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /usr/bin &gt; ls-output.txt</span><br></pre></td></tr></table></figure>
 
-索引的缺点
-维护索引需要额外的物理空间
-创建和维护索引也需要时间
+<p>‘&gt;’会从文件头部分重新改写，从文件末尾添加的话可以使用’&gt;&gt;‘</p>
+<p>在shell内部使用文件描述符来表示标准输入文件，标准输出文件和标准错误文件</p>
+<ul>
+<li>1 ：对应标准输入文件</li>
+<li>2 ：对应标准输出文件</li>
+<li>3 ：对应标准错误文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /bin/usr 2&gt; ls-error.txt</span><br></pre></td></tr></table></figure>
 
-索引的分类按照索引的功能分为：
+<h4 id="将标准输入和标准错误重定向到一个文件"><a href="#将标准输入和标准错误重定向到一个文件" class="headerlink" title="将标准输入和标准错误重定向到一个文件"></a>将标准输入和标准错误重定向到一个文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /bin/usr &amp;&gt;  ls-error.txt</span><br></pre></td></tr></table></figure>
 
-唯一索引：唯一索引是不允许其中任何两行具有相同索引值的索引。
-主键索...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
-    
-</div>
-            
-        </div>
+<h4 id="处理不想要的输出"><a href="#处理不想要的输出" class="headerlink" title="处理不想要的输出"></a>处理不想要的输出</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /bin/usr 2&gt; /dev/null</span><br></pre></td></tr></table></figure>
+
+<h4 id="标准输入重定向"><a href="#标准输入重定向" class="headerlink" title="标准输入重定向"></a>标准输入重定向</h4><p>cat命令的用法</p>
+<ul>
+<li>cat [file…]：读取一个或者多个文件并将它们复制到标准文件中</li>
+<li>cat：从键盘中获取输入</li>
+<li>cat &lt; file：从文件中获取标准输入流</li>
+</ul>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><p>使用管道操作符’|’ 可以把一个命令的标准输出传送到另一个命令的标准输入中。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l /usr/bin | less</span><br><span class="line">ls -l /bin /usr/bin | sort | less</span><br><span class="line">ls -l /bin /usr/bin | sort | uniq | less</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他命令介绍"><a href="#其他命令介绍" class="headerlink" title="其他命令介绍"></a>其他命令介绍</h3><h5 id="wc"><a href="#wc" class="headerlink" title="- wc"></a>- wc</h5><p>打印行数，字数，字节数</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wc ls-error.txt</span><br></pre></td></tr></table></figure>
+
+<h5 id="grep"><a href="#grep" class="headerlink" title="- grep"></a>- grep</h5><p>查找匹配文本</p>
+<p>grep pattern [file…]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /bin /usr/bin | sort | uniq | grep zip</span><br></pre></td></tr></table></figure>
+
+<p>grep的选项</p>
+<p>-i 忽略大小写</p>
+<p>-v 只输出和模式不匹配的行</p>
+<h5 id="head-tail"><a href="#head-tail" class="headerlink" title="- head/tail"></a>- head/tail</h5><p>输出文件的开头/结尾部分</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">head -n 5 ls-error.txt</span><br><span class="line">tail -n 5 ls-error.txt</span><br><span class="line">ls /usr/bin | tail -n 5</span><br></pre></td></tr></table></figure>
+
+<h5 id="tee"><a href="#tee" class="headerlink" title="- tee"></a>- tee</h5><p>读取标准输入并输出到stdout文件中</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /usr/bin | tee ls.txt | grep zip</span><br></pre></td></tr></table></figure>
+
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/24/数据库的一些概念-二/" >
-            
-                <span>数据库的一些概念(二)</span>
-        </a>
-        <div class="abstract-content">
-            前言
-由于上篇关于数据库的概念还没有介绍完，这篇博客继续总结。
-声明：本篇博客是对GitHub上javaguide和cs-notes的总结，不是原创。
-
-事务的隔离级别
-
-READ-UNCOMMITTED(未提交读)：最低的隔离级别，允许读取还未提交的数据，可能产生脏读，不可重复读，幻影读。
-READ-COMMITTED(读已提交)：允许并发的事务读取已经提交的数据，可以避免脏读，但是不能防止幻影读和不可重复读。
-REPETABLE-READ(可重复读)：对同一字段的多次结果是相同的，除非数据被本身的事务修改，可以防止脏读和不可重复读，但是不能避免幻影读。
-SERIALIZABLE(可穿...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://bonsoirzw.top">bonsoirzw</a>
+            <p>原文链接：<a href="http://bonsoirzw.top/2019/09/15/Linux命令行大全读书笔记-四/">http://bonsoirzw.top/2019/09/15/Linux命令行大全读书笔记-四/</a>
+            <p>发表日期：<a href="http://bonsoirzw.top/2019/09/15/Linux命令行大全读书笔记-四/">September 15th 2019, 1:10:13 pm</a>
+            <p>更新日期：<a href="http://bonsoirzw.top/2019/09/15/Linux命令行大全读书笔记-四/">September 15th 2019, 2:10:47 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Mysql">Mysql</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/23/数据库的一些概念/" >
-            
-                <span>数据库的一些概念(一)</span>
-        </a>
-        <div class="abstract-content">
-            mysql的两种引擎InnoDB和MyISAM声明这篇博客是对javaGuide和cyc2018的总结整理，不是原创。
-MyISAM和InnoDB的区别
-MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM不支持事务和行级锁，而且奔溃后无法安全恢复。在mysql5.5后引入了InnoDB。
-
-两者的对比
-
-是否支持行级锁，InnoDB支持，而MyISAM不支持。
-是否支持事务，InnoDB支持，而MyISAM不支持。
-是否支持外键，InnoDB支持，而MyISAM不支持。
-是否支持奔溃后的安全恢复，InnoDB支持，而MyISAM不支持。
-是否支持mvcc（后...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/09/14/Linux命令行手册读书笔记-三/" title= "Linux命令行手册读书笔记(三)">
+                    <div class="prevTitle">Linux命令行手册读书笔记(三)</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -552,6 +576,24 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#涉及到的命令"><span class="toc-number">2.</span> <span class="toc-text">涉及到的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标准输入输出重定向"><span class="toc-number">3.</span> <span class="toc-text">标准输入输出重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#将标准输入和标准错误重定向到一个文件"><span class="toc-number">3.1.</span> <span class="toc-text">将标准输入和标准错误重定向到一个文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#处理不想要的输出"><span class="toc-number">3.2.</span> <span class="toc-text">处理不想要的输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标准输入重定向"><span class="toc-number">3.3.</span> <span class="toc-text">标准输入重定向</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道"><span class="toc-number">4.</span> <span class="toc-text">管道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他命令介绍"><span class="toc-number">5.</span> <span class="toc-text">其他命令介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#wc"><span class="toc-number">5.0.1.</span> <span class="toc-text">- wc</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#grep"><span class="toc-number">5.0.2.</span> <span class="toc-text">- grep</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#head-tail"><span class="toc-number">5.0.3.</span> <span class="toc-text">- head/tail</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#tee"><span class="toc-number">5.0.4.</span> <span class="toc-text">- tee</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1751,6 +1793,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
