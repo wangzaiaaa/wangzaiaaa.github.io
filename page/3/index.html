@@ -359,6 +359,58 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/08/11/redis学习-Day1/" >
+            
+                <span>redis学习(Day1)</span>
+        </a>
+        <div class="abstract-content">
+            前言
+现在nosql非常火，特别是像redis等，作为一个菜鸡，当然不能错过。。。
+今天上午买了一台阿里云，搭了redis的环境，准备开始学习redis
+
+redis的通用命令
+keysredis中所有的键
+dbsizekey的数量
+exists keyredis中存在的key
+del key删除key
+expire key seconds隔一段时间删除key
+type key键的类型
+
+示例keyskeys *  : 显示所有的key
+
+keys可以支持通配符
+
+dbsize
+exists key
+del
+expire key secondskey在seconds秒后过期
+
+ttl k...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nosql">nosql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/08/05/工厂模式/" >
             
                 <span>工厂模式</span>
@@ -694,45 +746,6 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
         <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "二分法">二分法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/17/LeetCode543/" >
-            
-                <span>LeetCode543</span>
-        </a>
-        <div class="abstract-content">
-            题目描述
-给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过根结点。
-
-解题思路
-一开始我的思路是树的最大直径应该是左子树的最大深度加上右子树的最大深度，用这样的思路我写了代码，发现最后几个样例没有通过，然后我就想可能存在特殊的情况，树的最大直径可能是每个节点左子树的最大深度，右子树的最大深度的和中的最大值
-
-代码如下1234567891011121314151617181920212223242526/** * Definition for a binary tree node. * public class TreeNode...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "递归">递归</a>
     
 </div>
             
@@ -1692,9 +1705,32 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 49
+        Total : 50
         </div>
         <!-- search  -->
         
@@ -1707,6 +1743,11 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/03</span><a class="archive-post-title" href= "/2019/10/03/国庆假期之动态规划/" >国庆假期-动态规划系列</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1914,6 +1955,29 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
         </li>
     
     
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/06/18/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
         <li class="archive-post-item">
             <span class="archive-post-date">06/27</span><a class="archive-post-title" href= "/2019/06/27/LeetCode108/" >LeetCode108</a>
         </li>
@@ -1948,20 +2012,6 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
             <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2019/06/18/first-blog/" >first blog</a>
         </li>
     
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/06/18/hello-world/" >Hello World</a>
-        </li>
-    
     </div>
   </div>
         <div class="sidebar-panel-tags">
@@ -1987,9 +2037,9 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <span class="sidebar-tag-name" data-tags="回文串"><span class="iconfont-archer">&#xe606;</span>回文串</span>
     
-        <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
-    
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
+    
+        <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
     
         <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
     
@@ -2013,9 +2063,9 @@ MyISAM是mysql5.5版之前的数据库引擎，虽然性能很好，但是MyISAM
     
         <span class="sidebar-tag-name" data-tags="行为型模式"><span class="iconfont-archer">&#xe606;</span>行为型模式</span>
     
-        <span class="sidebar-tag-name" data-tags="创建型模式"><span class="iconfont-archer">&#xe606;</span>创建型模式</span>
-    
         <span class="sidebar-tag-name" data-tags="结构型模式"><span class="iconfont-archer">&#xe606;</span>结构型模式</span>
+    
+        <span class="sidebar-tag-name" data-tags="创建型模式"><span class="iconfont-archer">&#xe606;</span>创建型模式</span>
     
         <span class="sidebar-tag-name" data-tags="命令模式"><span class="iconfont-archer">&#xe606;</span>命令模式</span>
     
