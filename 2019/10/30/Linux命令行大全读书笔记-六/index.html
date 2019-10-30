@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>bonsoirzw&#39;blog</title>
+    <title>Linux命令行大全读书笔记(六) · bonsoirzw&#39;blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Hello World</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Linux命令行大全读书笔记(六)</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Hello World</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Linux命令行大全读书笔记(六)
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">496</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/10/30</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,416 +399,107 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/26/策略模式/" >
-            
-                <span>策略模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机完成一个任务，往往有多种方式，每一个方式就是一个策略，我们可以根据环境或者条件的不同来选择不同的策略来完成这个任务
-模式定义策略模式(Strategy Pattern)：定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式(Policy)。
-模式结构
-Context：环境类
-Strategy：抽象策略类
-ConcreteStrategy：具体策略类
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇文章主要介绍“环境”，在shell会话带哦用环境期间，shell会存储大量的信息，程序在使用存储环境中的数据来确定我们的配置。本篇文章主要涉及到如下命令：</p>
+<ul>
+<li>printenv：打印部分或者全部的环境信息</li>
+<li>set：设置shell选项</li>
+<li>export：将环境导出到随后要运行的程序中</li>
+<li>alias：为命令创造一个别名</li>
+</ul>
+<h3 id="检查环境"><a href="#检查环境" class="headerlink" title="检查环境"></a>检查环境</h3><p>要查看环境中存储得到内容，需要用到集成在bash中的set命令或printenv程序，set命令会同时显示shell变量和环境变量，printenv只会显示环境变量。</p>
+<p>set命令和printenc命令都不能显示一个环境元素是别名。要查看别名，需要使用不带任何参数的alias命令。</p>
+<h3 id="环境是如何建立的"><a href="#环境是如何建立的" class="headerlink" title="环境是如何建立的"></a>环境是如何建立的</h3><p>用户登录后，basg程序会启动并读取一系列的称为启动文件的配置脚本，这些脚本定义了所有用户共享的默认环境，接下来，bash会读取更多存储在主目录下的用于定义个人环境的启动文件。</p>
+<h3 id="login和non-login-shell"><a href="#login和non-login-shell" class="headerlink" title="login和non-login shell"></a>login和non-login shell</h3><p>shell会话有2种类型，分别为login shell会话和non-login shell会话。login shell会话需要用户输入账户和密码，login shell会读取一个或多个启动文件。</p>
+<p>login shell的启动文件</p>
+<table>
+<thead>
+<tr>
+<th align="center">文件</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">/etc/profile</td>
+<td align="center">适用于所有用户的全局配置脚本</td>
+</tr>
+<tr>
+<td align="center">~/.bash_profile</td>
+<td align="center">用户的个人启动文件</td>
+</tr>
+<tr>
+<td align="center">~/.bash_login</td>
+<td align="center">如果~/.bash_profile缺失，则bash尝试读取此脚本</td>
+</tr>
+<tr>
+<td align="center">~/.profile</td>
+<td align="center">如果<del>/.bash_profile和</del>/.bash_login都缺失，则bash尝试读取此脚本</td>
+</tr>
+</tbody></table>
+<p>non-login shell的启动文件</p>
+<table>
+<thead>
+<tr>
+<th align="center">文件</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">/etc/bash.bashrc</td>
+<td align="center">适用于所有用户的全局配置脚本</td>
+</tr>
+<tr>
+<td align="center">~/.bashrc</td>
+<td align="center">用户的个人启动文件</td>
+</tr>
+</tbody></table>
+<h3 id="修改环境"><a href="#修改环境" class="headerlink" title="修改环境"></a>修改环境</h3><p>我们可以上述启动文件加入一些配置，例如</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">umask 0003</span><br><span class="line">export HISTCONTROL=ignoredups</span><br><span class="line">export HISTSIZE=1000</span><br><span class="line">alias l.='ls -d .* --color=auto'</span><br></pre></td></tr></table></figure>
 
-UML类图
-使用场景
-如果在一个系统里面有许多类，它们之间的区别仅在于它们的行为，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。
-一个系统需要动态地在几种...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "行为型模式">行为型模式</a>
-    
-</div>
-            
-        </div>
+<p>最后要激活我们的配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source filename</span><br></pre></td></tr></table></figure>
+
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/25/观察者模式/" >
-            
-                <span>观察者模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机建立一种对象与对象之间的依赖关系，当一个对象发生改变时将自动通知其他对象，其他对象对此做出反应。
-模式定义观察者模式(Observer Pattern)：定义对象间的一种一对多依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象皆得到通知并被自动更新。观察者模式又叫做发布-订阅（Publish/Subscribe）模式。
-模式结构
-Subject：目标
-ConcreteSubject：具体目标
-Observer：观察者
-ConcreteObserver：具体观察者
-
-UML图
-适用场景
-一个抽象模型有两个方面，其中一个方面依赖于另一个方面。将这些方面封装在独立的对象中使它们可...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://bonsoirzw.top">bonsoirzw</a>
+            <p>原文链接：<a href="http://bonsoirzw.top/2019/10/30/Linux命令行大全读书笔记-六/">http://bonsoirzw.top/2019/10/30/Linux命令行大全读书笔记-六/</a>
+            <p>发表日期：<a href="http://bonsoirzw.top/2019/10/30/Linux命令行大全读书笔记-六/">October 30th 2019, 7:23:54 pm</a>
+            <p>更新日期：<a href="http://bonsoirzw.top/2019/10/30/Linux命令行大全读书笔记-六/">October 30th 2019, 8:00:23 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "行为型模式">行为型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/21/中介者模式/" >
-            
-                <span>中介者模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机对于一个模块，可能由多个对象组成，而且这些对象之间可能存在相互的引用，为了减少对象之间的引用关系，我们使用中介者模式。
-模式定义中介者模式(Mediator Pattern)定义：用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。中介者模式又称为调停者模式，它是一种对象行为型模式。
-模式结构
-Mediator：抽象中介者
-ConcreteMediator：具体中介者
-Colleague：抽象同事类
-ConcreteColleague：具体同事类
-
-UML图
-使用场景
-系统中对象之间存在复杂的引用关系，产生...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "行为型模式">行为型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/20/命令模式/" >
-            
-                <span>命令模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机在软件的设计过程中，我们经常向某些对象发送请求，但是并不知道请求的接收者是谁，也不知道被请求的操作是那个，我们只需要在程序运行时指定具体的请求接收者即可，我们可以用命令模式来进行设计，使得请求者和接收者之间消除彼此之间得耦合。
-模式定义命令模式（Command Pattern）: 将一个请求封装为一个对象，从而使我们可用不同得请求对客户进行参数化；对请求排队或者请求日志，以及支持可撤销的操作。
-模式结构
-Command：抽象命令类
-ConcreteCommand：具体命令类
-Invoker：调用者
-Client：客户类
-
-UML图
-应用场景
-系统需要将请求调用者和请求接收者解耦，...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "命令模式">命令模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/19/代理模式/" >
-            
-                <span>代理模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机在某些情况下，一个类不能直接引用一个对象，可以通过第三方代理来间接引用。代理对象起到中介的作用，并可以通过代理对象去掉或者添加一些功能
-模式定义代理模式(Proxy Pattern) ：给某一个对象提供一个代 理，并由代理对象控制对原对象的引用。代理模式的英 文叫做Proxy或Surrogate，它是一种对象结构型模式。
-模式结构
-Subject：抽象主题角色
-Proxy：代理主题角色
-RealSubject：真实主题角色
-
-
-适用环境
-远程(Remote)代理：为一个位于不同的地址空间的对象提供一个本地 的代理对象，这个不同的地址空间可以是在同一台主机中，也可是在 另一台主机中...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "创建型模式">创建型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/19/享元模式/" >
-            
-                <span>享元模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机面向对象技术可以很好地解决一些灵活或可扩展性问题，但是在很多情况下需要增加类和对象的个数，当对象的数量太多时，将导致运行的代价过高。享元模式正是为解决这一问题而诞生的。享元模式通过共享技术实现对相同或者相似对象的重用。
-模式定义享元模式(Flyweight Pattern)：运用共享技术有效地支持大量细粒度对象的复用。系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用。由于享元模式要求能够共享的对象必须是细粒度对象，因此它又称为轻量级模式，它是一种对象结构型模式。
-模式结构
-Flyweight：抽象享元类
-ConcreteFlyweight：具体共享类...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/18/外观模式/" >
-            
-                <span>外观模式</span>
-        </a>
-        <div class="abstract-content">
-            模式定义外部与一个子系统的通信必须通过一个统一的外观对象进行，为子系统中的一组接口提供一个一致的界面。
-模式结构
-Facade：外观角色
-SubStstem：子系统角色
-
-UML图
-使用场景
-当要为一个复杂子系统提供一个简单接口时可以使用外观模式。该接口可以满足大多数用户的需求，而且用户也可以越过外观类直接访问子系统。
-客户程序与多个子系统之间存在很大的依赖性。引入外观类将子系统与客户以及其他子系统解耦，可以提高子系统的独立性和可移植性。
-在层次化结构中，可以使用外观模式定义系统中每一层的入口，层与层之间不直接产生联系，而通过外观类建立联系，降低层之间的耦合度。
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/18/装饰器模式/" >
-            
-                <span>装饰器模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机给一个类增加行为有两种方式，一种方式是通过继承，二是通过关联。装饰器模式以对客户透明的方式动态地给一个类加上更多的责任。
-模式定义装饰模式(Decorator Pattern) ：动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。其别名也可以称为包装器(Wrapper)，与适配器模式的别名相同，但它们适用于不同的场合。根据翻译的不同，装饰模式也有人称之为“油漆工模式”，它是一种对象结构型模式。
-模式结构
-Component：抽象构件
-ConcreteComponent：具体构件
-Decorator：抽象装饰器
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/17/桥接模式/" >
-            
-                <span>桥接模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机桥接模式将基础关系转化为关联关系，从而降低了类与类之间的耦合。
-模式定义桥接模式（Bridge Pattern）：将抽象部分和它的实现分离，使它们都可以独立地变化。
-模式结构
-Abstraction：抽象类
-RefinedAbstraction：扩充抽象类
-Implementor：实现类接口
-ConcreteImplement：具体实现类
-
-UML图
-适用环境
-如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，通过桥接模式可以使它们在抽象层建立一个关联关系。
-抽象化角色和实现化角色可以以继承的方式独立扩展而互不影响，在程序运...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/17/适配器模式/" >
-            
-                <span>适配器模式</span>
-        </a>
-        <div class="abstract-content">
-            前言本文参考了cyc2018和图解设计模式
-模式动机有时现有的类可以满足客户类的功能需求，但是它提供的接口不一定是客户类所需要的，在这种情况下，现有的接口需要转化为客户类期待的接口，适配器模式可以完成这样的转化。
-模式定义适配器（Adapter Pattern）：将一个接口转换为客户希望的另一个接口，适配器模式使接口不兼容的类可以一起工作，其别名为包装器（Wrapper）。
-模式结构
-Target：目标抽象类
-Adapter：适配器类
-Adaptee：适配者类
-Client：客户类
-
-UML图
-优点
-将目标类和适配者类解耦，通过引入一个适配器类来重用现有的适配者类，而无需修改适配者的原有...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/10/30/并查集/" title= "并查集">
+                    <div class="prevTitle">并查集</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/tags/设计模式/page/2/">2</a><a class="extend next" rel="next" href="/tags/设计模式/page/2/">NEXT &#62;</a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -832,6 +584,24 @@ UML图
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查环境"><span class="toc-number">2.</span> <span class="toc-text">检查环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#环境是如何建立的"><span class="toc-number">3.</span> <span class="toc-text">环境是如何建立的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#login和non-login-shell"><span class="toc-number">4.</span> <span class="toc-text">login和non-login shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改环境"><span class="toc-number">5.</span> <span class="toc-text">修改环境</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2125,6 +1895,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
