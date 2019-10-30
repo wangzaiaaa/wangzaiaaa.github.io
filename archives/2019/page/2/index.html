@@ -346,6 +346,51 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/08/26/SQL优化/" >
+            
+                <span>SQL优化</span>
+        </a>
+        <div class="abstract-content">
+            前言本片文章总结一下我之前看的关于sql优化的文章
+索引因为后面会讲到索引，这里先介绍一下。
+索引是数据库中一个数据结构，用来帮助快速查询，更新数据。当然维护索引是有代价的，索引需要站空间，修改插入记录时都需要更新索引，消耗更多的时间。
+索引的优点
+通过创建唯一性索引，可以保证数据库中每一行数据的唯一性。
+可以加快数据的查找速度
+通过给外键加索引，可以加快表的连接速度
+使用分组和排序时也可以减少查询中分组和排序的时间
+
+索引的缺点
+维护索引需要额外的物理空间
+创建和维护索引也需要时间
+
+索引的分类按照索引的功能分为：
+
+唯一索引：唯一索引是不允许其中任何两行具有相同索引值的索引。
+主键索...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/26</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/08/26/策略模式/" >
             
                 <span>策略模式</span>
@@ -675,48 +720,6 @@ Decorator：抽象装饰器
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "设计模式">设计模式</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "结构型模式">结构型模式</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/08/17/桥接模式/" >
-            
-                <span>桥接模式</span>
-        </a>
-        <div class="abstract-content">
-            模式动机桥接模式将基础关系转化为关联关系，从而降低了类与类之间的耦合。
-模式定义桥接模式（Bridge Pattern）：将抽象部分和它的实现分离，使它们都可以独立地变化。
-模式结构
-Abstraction：抽象类
-RefinedAbstraction：扩充抽象类
-Implementor：实现类接口
-ConcreteImplement：具体实现类
-
-UML图
-适用环境
-如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，通过桥接模式可以使它们在抽象层建立一个关联关系。
-抽象化角色和实现化角色可以以继承的方式独立扩展而互不影响，在程序运...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/08/17</span>
             </div>
             <!-- tags  -->
             
@@ -1599,72 +1602,9 @@ UML图
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 52
+        Total : 53
         </div>
         <!-- search  -->
         
@@ -1677,6 +1617,11 @@ UML图
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/30</span><a class="archive-post-title" href= "/2019/10/30/Linux命令行大全读书笔记-五/" >Linux命令行大全读书笔记(五)</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1919,16 +1864,6 @@ UML图
         </li>
     
     
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/20</span><a class="archive-post-title" href= "/2019/06/20/LeetCode179/" >LeetCode179</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/LeetCode221/" >LeetCode221</a>
-        </li>
-    
-    
     
     
     
@@ -1953,6 +1888,16 @@ UML图
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">06/20</span><a class="archive-post-title" href= "/2019/06/20/LeetCode179/" >LeetCode179</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/LeetCode221/" >LeetCode221</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2019/06/18/first-blog/" >first blog</a>
         </li>
     
@@ -1969,13 +1914,13 @@ UML图
     
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
+        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
+    
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
         <span class="sidebar-tag-name" data-tags="二分法"><span class="iconfont-archer">&#xe606;</span>二分法</span>
     
         <span class="sidebar-tag-name" data-tags="hash"><span class="iconfont-archer">&#xe606;</span>hash</span>
-    
-        <span class="sidebar-tag-name" data-tags="bfs"><span class="iconfont-archer">&#xe606;</span>bfs</span>
     
         <span class="sidebar-tag-name" data-tags="HashMap"><span class="iconfont-archer">&#xe606;</span>HashMap</span>
     
@@ -1987,9 +1932,11 @@ UML图
     
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
+        <span class="sidebar-tag-name" data-tags="回文串"><span class="iconfont-archer">&#xe606;</span>回文串</span>
+    
         <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
     
-        <span class="sidebar-tag-name" data-tags="回文串"><span class="iconfont-archer">&#xe606;</span>回文串</span>
+        <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
     
         <span class="sidebar-tag-name" data-tags="hello"><span class="iconfont-archer">&#xe606;</span>hello</span>
     
@@ -2007,13 +1954,11 @@ UML图
     
         <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
     
-        <span class="sidebar-tag-name" data-tags="行为型模式"><span class="iconfont-archer">&#xe606;</span>行为型模式</span>
-    
         <span class="sidebar-tag-name" data-tags="结构型模式"><span class="iconfont-archer">&#xe606;</span>结构型模式</span>
     
-        <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
-    
         <span class="sidebar-tag-name" data-tags="创建型模式"><span class="iconfont-archer">&#xe606;</span>创建型模式</span>
+    
+        <span class="sidebar-tag-name" data-tags="行为型模式"><span class="iconfont-archer">&#xe606;</span>行为型模式</span>
     
         <span class="sidebar-tag-name" data-tags="命令模式"><span class="iconfont-archer">&#xe606;</span>命令模式</span>
     
@@ -2021,9 +1966,9 @@ UML图
     
         <span class="sidebar-tag-name" data-tags="创建者模式"><span class="iconfont-archer">&#xe606;</span>创建者模式</span>
     
-        <span class="sidebar-tag-name" data-tags="Mysql"><span class="iconfont-archer">&#xe606;</span>Mysql</span>
-    
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+    
+        <span class="sidebar-tag-name" data-tags="Mysql"><span class="iconfont-archer">&#xe606;</span>Mysql</span>
     
         <span class="sidebar-tag-name" data-tags="设计原则"><span class="iconfont-archer">&#xe606;</span>设计原则</span>
     
