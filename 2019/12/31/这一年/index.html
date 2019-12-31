@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LeetCode718 · bonsoirzw&#39;blog</title>
+    <title>这一年 · bonsoirzw&#39;blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Hello World</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode718</a>
+                <a href="#" class="post-name">这一年</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode718
+            这一年
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LeetCode">LeetCode</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "2019这一年">2019这一年</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">236</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.2k</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/09/04</span>
+                    <span class="post-intro-time">2019/12/31</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,24 +401,45 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给两个整数数组 A 和 B ，返回两个数组中公共的、长度最长的子数组的长度。</p>
-<p>示例 1:</p>
-<p>输入:<br>A: [1,2,3,2,1]<br>B: [3,2,1,4,7]<br>输出: 3<br>解释:<br>长度最长的公共子数组是 [3, 2, 1]。<br>说明:</p>
-<p>1 &lt;= len(A), len(B) &lt;= 1000<br>0 &lt;= A[i], B[i] &lt; 100</p>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>设dp[i] [j] 表示以数组A索引i开始，数组以B开始的最长公共最长的子数组的长度，则：</p>
-<p>if A[i] = B[j]</p>
-<p>dp[i] [j] = dp[i+1] [j+1] + 1</p>
-<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLength</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(A==<span class="keyword">null</span>||B==<span class="keyword">null</span>||A.length==<span class="number">0</span>||B.length==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> [][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[A.length+<span class="number">1</span>][B.length+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=A.length-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=B.length-<span class="number">1</span>;j&gt;=<span class="number">0</span>;j--)&#123;</span><br><span class="line">                <span class="keyword">if</span>(A[i]==B[j])&#123;</span><br><span class="line">                    dp[i][j] = <span class="number">1</span> + dp[i+<span class="number">1</span>][j+<span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">if</span>(dp[i][j]&gt;res) res = dp[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>今天是一个特殊的日子，是2019年的最后一天，但是也是2019年三百多天中普通的一天，考虑了很久要不要写下这段文字，毕竟手这么冷。但是一想，在2020年的最后一天或者是以后的其他日子，能够回忆起2019年的点点滴滴，手受点冷也没什么了。</p>
+</blockquote>
+<h3 id="2019年伊始"><a href="#2019年伊始" class="headerlink" title="2019年伊始"></a>2019年伊始</h3><blockquote>
+<p>就从大三上学期结束的寒假开始说起，那个寒假，看到了那一学期成绩后，心里有一丝安慰，毕竟那学期有稍微认真学习，但是随后很快就因为要不要考研这件事变得迷茫，家人都是支持我考研的，我确实有考虑过要去考研，因为本科学校很一般（没有要吐槽湖大的意思。。。），而且我也没有很早就立志去当码农那样准备技术，实习啥的。随后几天我都在考虑这件事情，在知乎上看了很多关于考研的问题，其中有个问题我现在还记得：“你为什么考研？”，看到好多回答都很鼓舞人心，但是最后我还是没有选择去考研，原因有很多，主要是仅仅因为提升学历去考研把，那样我可能坚持不下去。在做出这样的选择前，我在微博上咨询了李春葆老师，对话如下。</p>
+</blockquote>
+<p><img src="/2019/12/31/这一年/p1.jpg" alt></p>
+<p>之前是看到《一个男生应该具备什么样的品格》而关注的李老师，他的书《幸福》出版了，推广一波（哈哈</p>
+<h3 id="2019年中期"><a href="#2019年中期" class="headerlink" title="2019年中期"></a>2019年中期</h3><blockquote>
+<p>寒假过后已经开始上学了，在微博上看到张千学长已经被录取的消息，由衷的为他感到高兴，高中最后的那个暑假，我就在QQ上加了他，因为是老乡的原因，很早就面基过，而且还一起在操场上跑过步。大学期间这位老乡给了我很多帮助，祝他在研究生期间越来越瘦，学业有成。</p>
+<p>大三下的课对我来说，确实太水了，如果不是为了能安全毕业，我很可能像大一一样翘了，迫于应付，我还是每节课都去，只是干自己的，比如刷leetcode，看看自己买的书。讽刺的是这学期最后的成绩比上学期还高。。。</p>
+<p>期间我开始找一些实习，投了很多简历，面试了3家公司，只有一家通过，而且那家公司离学校巨远，而且风评不怎么好，我就没有去，现在想想很后悔，没有去那里实习。随后我干脆放弃去实习了想法了，后来在一个qq群里认识了jack哥，很感谢他的鼓励，他给我看了他的书单，看到那堆叠半米的书，很佩服他的毅力。</p>
+</blockquote>
+<h3 id="2019年末期"><a href="#2019年末期" class="headerlink" title="2019年末期"></a>2019年末期</h3><blockquote>
+<p>在学校安排的一个月实习结束后，我回家开始为准备找工作看cyc2018的cs-notes和牛客网，看到牛客网上那些大神，感叹人与人的差距真的好大，为什么自己会那么菜。不过牛客网的帖子上也看到很多互相鼓励的发言，想起来还有些感动。</p>
+<p>后来，我又去光谷的一家软件公司实习，实习期间错过了一些面试，不过最后还是拿到一家公司的offer，国庆节我就从那家软件公司离职了。</p>
+<p>离职后回到学校过了一段无忧无虑的日子，那段时间对于我这样一个忧愁善感的人简直太美好了。在那段时间，我把电脑和书籍都放在了朋友的租的房子里，白天去他那里自习，扯淡，晚上去操场跑步。</p>
+<p>那段时间我比较闲，我想了好多（感觉我是个带哲学家。。。 比如为什么我会成为一个多愁善感的人，为什么会过的不开心，做什么才有意义，为什么我喜欢拖延等等。</p>
+<p>后来我想到一些有意义的事情，比如看书，锻炼，分享，基于此，我弄一个微信公众号，一个博客。虽然还没有写很多东西，以后应该会坚持写一些东西。</p>
+</blockquote>
+<h3 id="2020的愿景"><a href="#2020的愿景" class="headerlink" title="2020的愿景"></a>2020的愿景</h3><blockquote>
+<ul>
+<li>希望家人身体健康</li>
+<li>希望自己可以坚持锻炼，坚持写博客，坚持学习，顺利毕业</li>
+<li>希望考研的同学和朋友都可以上岸</li>
+<li>希望不考研的同学可以找到好的工作</li>
+<li>希望2020可以脱困，脱单（ε=ε=ε=┏(゜ロ゜;)┛</li>
+</ul>
+</blockquote>
+<p><img src="/2019/12/31/这一年/p2.jpg" alt></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://bonsoirzw.top">bonsoirzw</a>
-            <p>原文链接：<a href="http://bonsoirzw.top/2019/09/04/LeetCode718/">http://bonsoirzw.top/2019/09/04/LeetCode718/</a>
-            <p>发表日期：<a href="http://bonsoirzw.top/2019/09/04/LeetCode718/">September 4th 2019, 10:42:49 pm</a>
-            <p>更新日期：<a href="http://bonsoirzw.top/2019/09/04/LeetCode718/">September 4th 2019, 10:47:52 pm</a>
+            <p>原文链接：<a href="http://bonsoirzw.top/2019/12/31/这一年/">http://bonsoirzw.top/2019/12/31/这一年/</a>
+            <p>发表日期：<a href="http://bonsoirzw.top/2019/12/31/这一年/">December 31st 2019, 3:23:11 pm</a>
+            <p>更新日期：<a href="http://bonsoirzw.top/2019/12/31/这一年/">December 31st 2019, 5:52:59 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -428,17 +447,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/09/11/Linux命令行大全读书笔计-一/" title= "Linux命令行大全读书笔计(一)">
-                    <div class="nextTitle">Linux命令行大全读书笔计(一)</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/08/31/LeetCode91/" title= "LeetCode91">
-                    <div class="prevTitle">LeetCode91</div>
+                <a href= "/2019/12/15/最长回文子串/" title= "最长回文子串">
+                    <div class="prevTitle">最长回文子串</div>
                 </a>
             
         </li>
@@ -557,7 +571,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码如下"><span class="toc-number">3.</span> <span class="toc-text">代码如下</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2019年伊始"><span class="toc-number">2.</span> <span class="toc-text">2019年伊始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2019年中期"><span class="toc-number">3.</span> <span class="toc-text">2019年中期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2019年末期"><span class="toc-number">4.</span> <span class="toc-text">2019年末期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2020的愿景"><span class="toc-number">5.</span> <span class="toc-text">2020的愿景</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
